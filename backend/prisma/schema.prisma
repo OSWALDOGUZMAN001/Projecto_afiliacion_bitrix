@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Carga {
+  id Int @id @default(autoincrement())
+
+  nombreArchivo String
+
+  totalRegistros Int
+
+  creados Int @default(0)
+
+  duplicados Int @default(0)
+
+  errores Int @default(0)
+
+  fechaCarga DateTime @default(now())
+}
+
+model Empresa {
+  id Int @id @default(autoincrement())
+
+  // Datos principales
+
+  nit String @unique
+
+  razonSocial String
+
+  // Contacto
+
+  direccion String?
+
+  barrio String?
+
+  localidad String?
+
+  celular1 String?
+
+  celular2 String?
+
+  celular3 String?
+
+  telefono String?
+
+  email String?
+
+  // Afiliacion
+
+  codigoCiiu String?
+
+  baseDatos String?
+
+  representanteLegal String?
+
+  trabajadores Int?
+
+  // Bitrix
+
+  estado String @default("PENDIENTE")
+
+  bitrixId String?
+
+  errorBitrix String?
+
+  intentosBitrix Int @default(0)
+
+  fechaBitrix DateTime?
+
+  fechaCarga DateTime @default(now())
+}

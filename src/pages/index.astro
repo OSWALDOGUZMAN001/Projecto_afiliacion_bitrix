@@ -1,17 +1,35 @@
 ---
+import Layout from "../layouts/Layout.astro";
 
+import Header from "../components/Header";
+import Dashboard from "../components/Dashboard";
+import UploadCSV from "../components/UploadCSV";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<Layout>
+
+
+<div class="container">
+
+
+<Header client:load />
+
+
+<Dashboard client:load />
+
+
+
+<div class="card upload-section">
+
+
+<UploadCSV client:load />
+
+
+</div>
+
+
+</div>
+
+
+</Layout>
