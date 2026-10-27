@@ -15,7 +15,8 @@ import {
     normalizar,
     limpiar,
     CODIGOS_LISTA,
-    CAMPO_NOMBRE_ASESOR
+    CAMPO_NOMBRE_ASESOR,
+    CAMPOS_FIJOS
 } from "./mapeoService.js";
 
 
@@ -45,6 +46,8 @@ function armarNegociacion(datos, camposBitrix, asesor){
             : {}),
 
         ...camposBitrix,
+
+        ...CAMPOS_FIJOS,
 
         [CAMPO_NOMBRE_ASESOR]:
         asesor.nombre
@@ -334,6 +337,8 @@ export async function procesarEmpresas(
                     email:datos.email,
 
                     codigoCiiu:datos.codigoCiiu,
+
+                    baseDatos:CAMPOS_FIJOS.UF_CRM_1743690427,
 
                     representanteLegal:datos.representanteLegal,
 

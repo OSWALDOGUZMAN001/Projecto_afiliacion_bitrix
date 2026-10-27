@@ -155,6 +155,13 @@ export const SINONIMOS_LISTAS = {
 };
 
 
+// Valores fijos en toda negociacion creada por esta carga
+export const CAMPOS_FIJOS = {
+    // Base de datos - Afiliacion
+    UF_CRM_1743690427:"CSV"
+};
+
+
 // (AFI) Asesor: se llena con el nombre del asesor asignado
 export const CAMPO_NOMBRE_ASESOR = "UF_CRM_66D62A1EDD402";
 

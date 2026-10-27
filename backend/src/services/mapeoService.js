@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import {
     MAPEO_CAMPOS,
     COLUMNAS_NO_ENVIAR,
+    CAMPOS_FIJOS,
     SINONIMOS_LISTAS,
     CAMPO_NOMBRE_ASESOR,
     TEXTO_EXCLUSION,
@@ -31,6 +32,7 @@ const CAMPOS_POR_CODIGO = new Map(
 
 for(const codigo of [
     ...MAPEO_CAMPOS.map(m=>m.bitrix).filter(Boolean),
+    ...Object.keys(CAMPOS_FIJOS),
     CAMPO_NOMBRE_ASESOR
 ]){
 
@@ -322,4 +324,4 @@ export function nombreCampo(codigo){
 }
 
 
-export { CAMPO_NOMBRE_ASESOR };
+export { CAMPO_NOMBRE_ASESOR, CAMPOS_FIJOS };
