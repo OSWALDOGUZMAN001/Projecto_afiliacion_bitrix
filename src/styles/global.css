@@ -564,3 +564,48 @@ pre{
     white-space:nowrap;
 
 }
+
+/* RESUMEN IMPORTACION */
+
+.asesor-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    margin:18px 0;
+
+    font-size:14px;
+
+}
+
+
+.asesor-field input{
+
+    max-width:220px;
+
+    padding:10px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+}
+
+
+.detalle-carga{
+
+    margin-top:22px;
+
+}
+
+
+.detalle-carga .table-container table{
+
+    min-width:100%;
+
+    width:100%;
+
+}

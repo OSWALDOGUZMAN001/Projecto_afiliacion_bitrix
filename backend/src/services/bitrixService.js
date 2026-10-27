@@ -1,78 +1,81 @@
-export async function crearNegociacionBitrix(empresa){
+import axios from "axios";
 
 
-    const response = await fetch(
+// URL del webhook entrante, terminada en "/".
+// Ejemplo: https://comfacundi.bitrix24.es/rest/USUARIO/TOKEN/
+// Se configura en backend/.env, nunca en el codigo.
 
-        process.env.BITRIX_WEBHOOK +
-        "crm.deal.add.json",
+function urlBitrix(metodo){
 
-        {
+    const webhook = process.env.BITRIX_WEBHOOK;
 
-            method:"POST",
-
-            headers:{
-                "Content-Type":"application/json"
-            },
-
-
-            body:JSON.stringify({
-
-                fields:{
-
-
-                    TITLE:
-                    `Afiliación ${empresa.razonSocial}`,
-
-
-                    CATEGORY_ID:145,
-
-
-                    STAGE_ID:"C145:NEW",
-
-
-                    COMMENTS:
-                    `
-                    NIT: ${empresa.nit}
-                    Empresa: ${empresa.razonSocial}
-                    Email: ${empresa.email || ""}
-                    Teléfono: ${empresa.telefono || ""}
-                    Ciudad: ${empresa.ciudad || ""}
-                    `
-
-                }
-
-            })
-
-        }
-
-    );
-
-
-
-    const data =
-    await response.json();
-
-
-
-    console.log(
-        "Respuesta Bitrix:",
-        data
-    );
-
-
-
-    if(!data.result){
+    if(!webhook){
 
         throw new Error(
-            data.error_description ||
-            "No se pudo crear negociación"
+            "Falta BITRIX_WEBHOOK en backend/.env"
         );
 
     }
 
+    return webhook.replace(/\/?$/, "/") + metodo;
+
+}
 
 
-    return data.result;
 
+
+export async function crearNegociacionBitrix(fields){
+
+
+    console.log(
+        "========== DATOS ENVIADOS BITRIX =========="
+    );
+
+    console.log(
+        JSON.stringify(fields, null, 2)
+    );
+
+
+    try{
+
+        const response = await axios.post(
+
+            urlBitrix("crm.deal.add.json"),
+
+            { fields }
+
+        );
+
+
+        if(!response.data.result){
+
+            throw new Error(
+                response.data.error_description ||
+                "No se pudo crear negociación"
+            );
+
+        }
+
+
+        return response.data.result;
+
+    }
+    catch(error){
+
+        const detalle =
+            error.response?.data?.error_description ||
+            error.response?.data?.error ||
+            error.message;
+
+
+        console.error(
+            "ERROR BITRIX",
+            error.response?.data || error.message
+        );
+
+
+        throw new Error(detalle);
+
+    }
 
 }

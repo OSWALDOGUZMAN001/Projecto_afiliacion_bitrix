@@ -12,15 +12,28 @@ export default async function companiesRoutes(app){
 
             const {
                 nombreArchivo,
-                empresas
+                empresas,
+                asesorId
             } = request.body;
+
+
+
+            if(!Array.isArray(empresas) || empresas.length === 0){
+
+                return {
+                    success:false,
+                    error:"El archivo no tiene registros"
+                };
+
+            }
 
 
 
             const resultado =
                 await procesarEmpresas(
                     nombreArchivo,
-                    empresas
+                    empresas,
+                    asesorId
                 );
 
 

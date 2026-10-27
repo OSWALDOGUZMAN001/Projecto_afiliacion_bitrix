@@ -1,200 +1,96 @@
-import axios from "axios";
 import prisma from "../utils/prisma.js";
 
+import { crearNegociacionBitrix } from "./bitrixService.js";
 
-const BITRIX_URL =
-"https://comfacundi.bitrix24.es/rest/216459/7hkgspq9r2fbthll";
+import {
+    resolverColumnas,
+    mapearFila,
+    tieneExclusion,
+    limpiar,
+    CAMPO_NOMBRE_ASESOR
+} from "./mapeoService.js";
 
 
+const CATEGORY_ID = 145;
 
-function limpiar(valor){
-
-    if(valor === undefined || valor === null){
-        return "";
-    }
-
-    return String(valor).trim();
-
-}
-
+const STAGE_ID = "C145:NEW";
 
 
 
 
-async function crearNegociacionBitrix(empresa){
+function armarNegociacion(datos, camposBitrix, asesor){
 
-
-    const deal = {
-
+    return {
 
         TITLE:
-        `AFILIACIÓN - ${empresa.razonSocial} - ${empresa.nit}`,
+        `AFILIACIÓN - ${datos.razonSocial || "SIN RAZÓN SOCIAL"} - ${datos.nit}`,
 
+        CATEGORY_ID,
 
-        CATEGORY_ID:145,
+        STAGE_ID,
 
+        // Responsable de la negociacion
+        ASSIGNED_BY_ID:
+        asesor.bitrixResponsableId,
 
-        STAGE_ID:"C145:NEW",
+        ...camposBitrix,
 
-
-
-        /*
-        CAMPOS NEGOCIACION
-        */
-
-
-        // Trabajadores
-        UF_CRM_1727966365:
-        Number(empresa.trabajadores) || 0,
-
-
-
-        // Barrio
-        UF_CRM_1626966414:
-        empresa.barrio || "",
-
-
-
-        // Localidad
-        // IMPORTANTE:
-        // Este campo es lista desplegable.
-        // Pendiente colocar ID interno.
-        UF_CRM_1765812845:
-        "",
-
-
-
-        // Celular empresa 1
-        UF_CRM_1743690121:
-        empresa.celular1 || "",
-
-
-
-        // Celular empresa 2
-        UF_CRM_1743690139:
-        empresa.celular2 || "",
-
-
-
-        // Celular empresa 3
-        UF_CRM_1743690158:
-        empresa.celular3 || "",
-
-
-
-
-        // Correo
-        UF_CRM_1743690187:
-        empresa.email || "",
-
-
-
-
-        // Código CIIU
-        // Es texto, no número
-        UF_CRM_689A7012E6340:
-        empresa.codigoCiiu || "",
-
-
-
-        // Base datos
-        UF_CRM_1741961954:
-        empresa.baseDatos || "",
-
-
-
-
-        // Representante legal
-        // Si existe campo en negociación agregar ID correcto
+        [CAMPO_NOMBRE_ASESOR]:
+        asesor.nombre
 
     };
 
-
-
-
-    console.log(
-        "========== DATOS ENVIADOS BITRIX =========="
-    );
-
-
-    console.log(
-        JSON.stringify(
-            deal,
-            null,
-            2
-        )
-    );
+}
 
 
 
 
-    try{
+function numeroEntero(valor){
 
+    const numero = parseInt(String(valor).replace(/\D/g, ""), 10);
 
-        const response = await axios.post(
-
-            `${BITRIX_URL}/crm.deal.add.json`,
-
-            {
-                fields:deal
-            }
-
-        );
-
-
-        console.log(
-            "RESPUESTA BITRIX",
-            response.data
-        );
-
-
-        return response.data.result;
-
-
-
-    }
-    catch(error){
-
-
-        console.error(
-            "ERROR BITRIX",
-            error.response?.data ||
-            error.message
-        );
-
-
-        throw error;
-
-    }
-
+    return Number.isFinite(numero) ? numero : null;
 
 }
 
 
 
 
-
-
-
-
+/*
+empresas:  filas del CSV tal como vienen (columna -> valor)
+asesorId:  asesor por defecto para filas sin columna de asesor
+*/
 
 export async function procesarEmpresas(
 
     nombreArchivo,
 
-    empresas
+    empresas,
+
+    asesorIdPorDefecto
 
 ){
 
 
+    const creados = [];
 
-    let creados = 0;
+    const omitidos = [];
 
-    let duplicados = 0;
+    const duplicados = [];
 
-    let errores = 0;
+    const errores = [];
 
 
+
+    const columnas = Object.keys(empresas[0] || {});
+
+    const { mapeadas, noMapeadas } = resolverColumnas(columnas);
+
+
+
+    const asesores = new Map(
+        (await prisma.asesor.findMany({ where:{ activo:true } })).map(a=>[a.id, a])
+    );
 
 
 
@@ -214,138 +110,33 @@ export async function procesarEmpresas(
 
 
 
+    for(const [index, fila] of empresas.entries()){
 
 
+        // Fila 1 del CSV son los encabezados
+        const numeroFila = index + 2;
 
+        const { datos, camposBitrix } = mapearFila(fila, mapeadas);
 
-    for(const empresa of empresas){
-
+        const registro = {
+            fila:numeroFila,
+            nit:datos.nit || "",
+            razonSocial:datos.razonSocial || ""
+        };
 
 
         try{
 
 
+            // 1. Identificacion en tramite: no se sube
 
-            const datos = {
+            if(tieneExclusion(fila)){
 
-
-
-                nit:
-                limpiar(
-                    empresa.nit
-                ),
-
-
-
-                nombreEmpresa:
-                limpiar(
-                    empresa.razonSocial
-                ),
-
-
-
-                direccion:
-                limpiar(
-                    empresa.direccion
-                ),
-
-
-
-                barrio:
-                limpiar(
-                    empresa.barrio
-                ),
-
-
-
-                localidad:
-                limpiar(
-                    empresa.localidad
-                ),
-
-
-
-                celular1:
-                limpiar(
-                    empresa.celular1
-                ),
-
-
-
-                celular2:
-                limpiar(
-                    empresa.celular2
-                ),
-
-
-
-                celular3:
-                limpiar(
-                    empresa.celular3
-                ),
-
-
-
-                telefono:
-                limpiar(
-                    empresa.telefono
-                ),
-
-
-
-                email:
-                limpiar(
-                    empresa.email
-                ),
-
-
-
-                codigoCiiu:
-                limpiar(
-                    empresa.codigoCiiu
-                ),
-
-
-
-                baseDatos:
-                limpiar(
-                    empresa.baseDatos
-                ),
-
-
-
-                representanteLegal:
-                limpiar(
-                    empresa.representanteLegal
-                ),
-
-
-
-                trabajadores:
-                limpiar(
-                    empresa.trabajadores
-                )
-
-            };
-
-
-
-
-            console.log(
-                "DATOS NORMALIZADOS",
-                datos
-            );
-
-
-
-
-
-            if(
-                !datos.nit ||
-                !datos.nombreEmpresa
-            ){
-
-                errores++;
+                omitidos.push({
+                    ...registro,
+                    nit:datos.nitOriginal || "",
+                    motivo:"Identificación en trámite"
+                });
 
                 continue;
 
@@ -353,30 +144,66 @@ export async function procesarEmpresas(
 
 
 
+            // 2. NIT obligatorio
+
+            if(!datos.nit){
+
+                errores.push({
+                    ...registro,
+                    motivo:"Registro sin NIT"
+                });
+
+                continue;
+
+            }
 
 
 
+            // 3. Asesor asignado
+
+            const asesorId = numeroEntero(
+                datos.asesorId ?? limpiar(asesorIdPorDefecto)
+            );
+
+            const asesor = asesores.get(asesorId);
 
 
-            const existe =
-            await prisma.empresa.findUnique({
+            if(!asesor){
 
-                where:{
+                errores.push({
+                    ...registro,
+                    motivo: asesorId === null
+                        ? "Registro sin asesor asignado"
+                        : `El asesor ${asesorId} no está registrado`
+                });
 
-                    nit:
-                    datos.nit
+                continue;
 
-                }
+            }
+
+
+
+            // 4. NIT ya cargado anteriormente
+
+            const existe = await prisma.empresa.findUnique({
+
+                where:{ nit:datos.nit },
+
+                include:{ asesor:true }
 
             });
-
-
-
 
 
             if(existe){
 
-                duplicados++;
+                const nombreAsesor =
+                    existe.asesor?.nombre || "Sin asesor registrado";
+
+                duplicados.push({
+                    ...registro,
+                    asesor:nombreAsesor,
+                    mensaje:`El documento ya ha sido cargado - Asesor: ${nombreAsesor}`
+                });
 
                 continue;
 
@@ -384,173 +211,150 @@ export async function procesarEmpresas(
 
 
 
+            // 5. Crear negociacion en Bitrix
+
+            const bitrixId = await crearNegociacionBitrix(
+                armarNegociacion(datos, camposBitrix, asesor)
+            );
 
 
 
+            // 6. Guardar localmente solo si Bitrix la creo
 
-
-            const empresaBD =
             await prisma.empresa.create({
 
                 data:{
 
+                    nit:datos.nit,
 
-                    nit:
-                    datos.nit,
+                    razonSocial:datos.razonSocial || "",
 
+                    direccion:datos.direccion,
 
-                    razonSocial:
-                    datos.nombreEmpresa,
+                    barrio:datos.barrio,
 
+                    localidad:datos.localidad,
 
-                    email:
-                    datos.email,
+                    celular1:datos.celular1,
 
+                    celular2:datos.celular2,
 
-                    telefono:
-                    datos.telefono,
+                    celular3:datos.celular3,
 
+                    telefono:datos.telefono,
 
-                    estado:
-                    "PENDIENTE"
+                    email:datos.email,
 
-                }
+                    codigoCiiu:datos.codigoCiiu,
 
-            });
+                    baseDatos:datos.baseDatos,
 
+                    representanteLegal:datos.representanteLegal,
 
+                    trabajadores:
+                    datos.trabajadores ? numeroEntero(datos.trabajadores) : null,
 
+                    asesorId:asesor.id,
 
+                    estado:"CREADO",
 
+                    bitrixId:String(bitrixId),
 
-
-
-
-            const bitrixId =
-            await crearNegociacionBitrix(datos);
-
-
-
-
-
-
-
-
-            await prisma.empresa.update({
-
-                where:{
-
-                    id:
-                    empresaBD.id
-
-                },
-
-
-                data:{
-
-
-                    bitrixId:
-                    String(bitrixId),
-
-
-                    estado:
-                    "CREADO"
+                    fechaBitrix:new Date()
 
                 }
 
             });
 
 
-
-
-            creados++;
-
+            creados.push({
+                ...registro,
+                asesor:asesor.nombre,
+                bitrixId:String(bitrixId)
+            });
 
 
         }
         catch(error){
 
-
-
             console.error(
-
                 "ERROR EMPRESA",
-
-                error.response?.data ||
                 error.message
-
             );
 
-
-
-            errores++;
-
+            errores.push({
+                ...registro,
+                motivo:error.message
+            });
 
         }
-
 
     }
 
 
 
 
-
-
-
-
     await prisma.carga.update({
 
-        where:{
-
-            id:
-            carga.id
-
-        },
-
+        where:{ id:carga.id },
 
         data:{
 
+            creados:creados.length,
 
-            creados,
+            omitidos:omitidos.length,
 
-            duplicados,
+            duplicados:duplicados.length,
 
-            errores
+            errores:errores.length
 
         }
-
 
     });
 
 
 
 
-
-
-
-
     return {
 
+        cargaId:carga.id,
 
-        cargaId:
-        carga.id,
+        total:empresas.length,
 
+        resumen:{
 
-        total:
-        empresas.length,
+            creados:creados.length,
 
+            omitidos:omitidos.length,
+
+            duplicados:duplicados.length,
+
+            errores:errores.length
+
+        },
 
         creados,
 
+        omitidos,
 
         duplicados,
 
+        errores,
 
-        errores
+        columnas:{
 
+            mapeadas:Object.entries(mapeadas).map(
+                ([columna, destino])=>({
+                    columna,
+                    campo:destino.clave,
+                    bitrix:destino.bitrix
+                })
+            ),
+
+            noMapeadas
+
+        }
 
     };
-
-
 
 }

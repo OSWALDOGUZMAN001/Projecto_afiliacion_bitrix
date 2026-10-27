@@ -1,5 +1,10 @@
 import { useState } from "react";
 
+import Papa from "papaparse";
+
+
+const API_URL = "http://localhost:3000/api/companies";
+
 
 export default function UploadCSV() {
 
@@ -7,6 +12,8 @@ export default function UploadCSV() {
     const [archivo, setArchivo] = useState(null);
 
     const [empresas, setEmpresas] = useState([]);
+
+    const [asesorId, setAsesorId] = useState("");
 
     const [resultado, setResultado] = useState(null);
 
@@ -23,7 +30,7 @@ export default function UploadCSV() {
         if(!valor)
             return "";
 
-        return valor
+        return String(valor)
             .replace(/�/g,"")
             .trim();
 
@@ -35,146 +42,47 @@ export default function UploadCSV() {
 
     // ==================================
     // LEER CSV
+    // Papaparse detecta ";" o "," y respeta comillas
     // ==================================
 
     function leerCSV(file){
 
 
-        const reader = new FileReader();
+        Papa.parse(file,{
+
+            header:true,
+
+            skipEmptyLines:"greedy",
+
+            encoding:"UTF-8",
+
+            transformHeader:(header)=>
+                limpiarTexto(header.replace(/^﻿/, "")),
+
+            transform:(valor)=>
+                limpiarTexto(valor),
 
 
-
-        reader.onload = (e)=>{
-
-
-            let texto = e.target.result;
+            complete:(results)=>{
 
 
-
-            texto = texto.replace(/^\uFEFF/, "");
-
-
-
-            const lineas = texto
-
-                .split(/\r?\n/)
-
-                .filter(
-                    linea=>linea.trim()
+                console.log(
+                    "SEPARADOR DETECTADO:",
+                    results.meta.delimiter
                 );
 
 
-
-
-            if(lineas.length === 0)
-                return;
-
-
-
-
-            // Detectar separador
-
-            const separador = 
-                lineas[0].includes(";")
-                ?
-                ";"
-                :
-                ",";
-
-
-
-
-
-            console.log(
-                "SEPARADOR DETECTADO:",
-                separador
-            );
-
-
-
-
-            const headers = lineas[0]
-
-                .split(separador)
-
-                .map(
-                    h=>limpiarTexto(h)
+                console.log(
+                    "DATOS LEIDOS:",
+                    results.data
                 );
 
 
+                setEmpresas(results.data);
 
+            }
 
-            console.log(
-                "COLUMNAS CSV:",
-                headers
-            );
-
-
-
-
-
-            const datos = lineas
-
-            .slice(1)
-
-            .map(linea=>{
-
-
-                const valores = linea
-
-                    .split(separador)
-
-                    .map(
-                        v=>limpiarTexto(v)
-                    );
-
-
-
-                let objeto = {};
-
-
-
-                headers.forEach(
-                    (header,index)=>{
-
-
-                        objeto[header] =
-                            valores[index] || "";
-
-                    }
-
-                );
-
-
-
-                return objeto;
-
-
-            });
-
-
-
-
-
-            console.log(
-                "DATOS LEIDOS:",
-                datos
-            );
-
-
-
-            setEmpresas(datos);
-
-
-        };
-
-
-
-
-        reader.readAsText(
-            file,
-            "UTF-8"
-        );
+        });
 
 
     }
@@ -203,6 +111,8 @@ export default function UploadCSV() {
 
 
         setArchivo(file);
+
+        setEmpresas([]);
 
         leerCSV(file);
 
@@ -255,7 +165,7 @@ export default function UploadCSV() {
 
             await fetch(
 
-                "http://localhost:3000/api/companies",
+                API_URL,
 
                 {
 
@@ -276,6 +186,11 @@ export default function UploadCSV() {
 
                         nombreArchivo:
                         archivo.name,
+
+
+                        // Se usa solo si el CSV no trae columna de asesor
+                        asesorId:
+                        asesorId || null,
 
 
                         empresas
@@ -366,7 +281,7 @@ Carga de afiliaciones
 
 
 <p>
-Importa un archivo CSV para validar empresas y procesarlas en Bitrix24.
+Importa un archivo CSV para crear negociaciones de afiliación en Bitrix24.
 </p>
 
 
@@ -428,6 +343,7 @@ archivo &&
 {archivo.name}
 </b>
 
+({empresas.length} registros)
 
 </div>
 
@@ -557,6 +473,26 @@ Object.values(empresa)
 
 
 
+<label className="asesor-field">
+
+ID asesor (solo si el CSV no trae columna "asesor")
+
+<input
+
+type="number"
+
+value={asesorId}
+
+onChange={e=>setAsesorId(e.target.value)}
+
+placeholder="Ej: 1"
+
+/>
+
+</label>
+
+
+
 
 
 <button
@@ -612,7 +548,7 @@ resultado &&
 
 
 <h3>
-Resultado servidor
+Resultado de la importación
 </h3>
 
 
@@ -623,25 +559,7 @@ resultado.success
 
 ?
 
-<pre>
-
-{
-
-JSON.stringify(
-
-resultado.resultado,
-
-null,
-
-2
-
-)
-
-}
-
-
-</pre>
-
+<ResumenCarga resultado={resultado.resultado} />
 
 :
 
@@ -669,5 +587,210 @@ null,
 
 );
 
+
+}
+
+
+
+
+
+
+
+
+
+// ==================================
+// RESUMEN DE LA CARGA
+// ==================================
+
+function ResumenCarga({ resultado }){
+
+
+    const { resumen } = resultado;
+
+
+    return (
+
+<>
+
+
+<div className="result-grid">
+
+
+<div className="result-item">
+<span>Creados</span>
+<strong>{resumen.creados}</strong>
+</div>
+
+
+<div className="result-item">
+<span>Omitidos (Identificación en trámite)</span>
+<strong>{resumen.omitidos}</strong>
+</div>
+
+
+<div className="result-item">
+<span>Duplicados</span>
+<strong>{resumen.duplicados}</strong>
+</div>
+
+
+<div className="result-item">
+<span>Errores</span>
+<strong>{resumen.errores}</strong>
+</div>
+
+
+</div>
+
+
+
+
+<TablaDetalle
+
+titulo="Duplicados (no se creó negociación)"
+
+filas={resultado.duplicados}
+
+columnas={[
+    ["fila","Fila"],
+    ["nit","NIT"],
+    ["razonSocial","Razón social"],
+    ["asesor","Asesor"],
+    ["mensaje","Mensaje"]
+]}
+
+/>
+
+
+
+<TablaDetalle
+
+titulo="Omitidos"
+
+filas={resultado.omitidos}
+
+columnas={[
+    ["fila","Fila"],
+    ["nit","NIT"],
+    ["razonSocial","Razón social"],
+    ["motivo","Motivo"]
+]}
+
+/>
+
+
+
+<TablaDetalle
+
+titulo="Errores"
+
+filas={resultado.errores}
+
+columnas={[
+    ["fila","Fila"],
+    ["nit","NIT"],
+    ["razonSocial","Razón social"],
+    ["motivo","Motivo"]
+]}
+
+/>
+
+
+
+<TablaDetalle
+
+titulo="Creados en Bitrix"
+
+filas={resultado.creados}
+
+columnas={[
+    ["fila","Fila"],
+    ["nit","NIT"],
+    ["razonSocial","Razón social"],
+    ["asesor","Asesor"],
+    ["bitrixId","ID negociación"]
+]}
+
+/>
+
+
+
+<TablaDetalle
+
+titulo="Columnas del CSV sin mapear"
+
+filas={resultado.columnas.noMapeadas}
+
+columnas={[
+    ["columna","Columna"],
+    ["motivo","Motivo"]
+]}
+
+/>
+
+
+</>
+
+    );
+
+}
+
+
+
+
+function TablaDetalle({ titulo, filas, columnas }){
+
+
+    if(!filas || filas.length === 0)
+        return null;
+
+
+    return (
+
+<div className="detalle-carga">
+
+
+<h4>
+{titulo} ({filas.length})
+</h4>
+
+
+<div className="table-container">
+
+<table>
+
+<thead>
+<tr>
+{
+columnas.map(([clave,nombre])=>(
+<th key={clave}>{nombre}</th>
+))
+}
+</tr>
+</thead>
+
+
+<tbody>
+{
+filas.map((fila,index)=>(
+<tr key={index}>
+{
+columnas.map(([clave])=>(
+<td key={clave}>{fila[clave]}</td>
+))
+}
+</tr>
+))
+}
+</tbody>
+
+</table>
+
+</div>
+
+
+</div>
+
+    );
 
 }

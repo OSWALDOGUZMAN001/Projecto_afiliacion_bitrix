@@ -16,6 +16,8 @@ model Carga {
 
   creados Int @default(0)
 
+  omitidos Int @default(0)
+
   duplicados Int @default(0)
 
   errores Int @default(0)
@@ -60,6 +62,12 @@ model Empresa {
 
   trabajadores Int?
 
+  // Asesor asignado
+
+  asesorId Int?
+
+  asesor Asesor? @relation(fields: [asesorId], references: [id])
+
   // Bitrix
 
   estado String @default("PENDIENTE")
@@ -73,4 +81,22 @@ model Empresa {
   fechaBitrix DateTime?
 
   fechaCarga DateTime @default(now())
+}
+
+
+
+model Asesor {
+  // Numero/ID del asesor enviado en la carga
+  id Int @id
+
+  nombre String
+
+  // ID del usuario responsable en Bitrix24 (ASSIGNED_BY_ID)
+  bitrixResponsableId Int
+
+  activo Boolean @default(true)
+
+  fechaCreacion DateTime @default(now())
+
+  empresas Empresa[]
 }

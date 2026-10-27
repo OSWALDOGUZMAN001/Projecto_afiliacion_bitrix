@@ -1,0 +1,5900 @@
+[
+ {
+  "codigo": "UF_CRM_1605911396",
+  "nombre": "Descuento hecho",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1605911539",
+  "nombre": "DICCIONARIO DE DATOS - EDUCACIÓN",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1605911589",
+  "nombre": "DICCIONARIO DE DATOS - COMÚN EN PIPELINES",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606242073",
+  "nombre": "DICCIONARIO DE DATOS - MPC",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606249231",
+  "nombre": "DICCIONARIO  DE  DATOS-CRÉDITO",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606251735",
+  "nombre": "DICCIONARIO DE DATOS - RECREACIÓN Y TURISMO",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606252231",
+  "nombre": "Código Reserva",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606252281",
+  "nombre": "Fecha Check-in",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606252322",
+  "nombre": "Fecha Check-out",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606252668",
+  "nombre": "Comprobante de Pago",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606253695",
+  "nombre": "(MER) Tipo de Solicitud",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606254071",
+  "nombre": "Tipo de Servicio",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606254237",
+  "nombre": "Número de Adultos",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606254262",
+  "nombre": "Número de Niños",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606496051",
+  "nombre": "DICCIONARIO DE DATOS - ATENCIÓN AL CLIENTE -PQRSF",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606496480",
+  "nombre": "Área de trabajo responsable",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606506896",
+  "nombre": "DICCIONARIO DE DATOS - EVENTOS",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606506979",
+  "nombre": "Tipo Evento",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606508638",
+  "nombre": "Areas Evento",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1606509086",
+  "nombre": "Salón Eventos",
+  "tipo": "resourcebooking",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1606509563",
+  "nombre": "Fecha Evento",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606526550",
+  "nombre": "Control de etapa PQRS",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606597744",
+  "nombre": "Control ejecución PQRSF",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606848578",
+  "nombre": "CRM KIST TO PIPELINE",
+  "tipo": "crm_status",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606854623",
+  "nombre": "Categoría Petición",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606854861",
+  "nombre": "RECLAMO, Motivo",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606857910",
+  "nombre": "Tipología- Antigua",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606858910",
+  "nombre": "Subtipología PQRSF",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606867125",
+  "nombre": "Descripción de la solicitud",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606869171",
+  "nombre": "Documentos soporte",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1606925427",
+  "nombre": "Servicio Solicitado",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606926077",
+  "nombre": "Tipo de PQRSF",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606926588",
+  "nombre": "Tipo de cliente",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1606943213",
+  "nombre": "PQRSF #",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1607019406",
+  "nombre": "DICCIONARIO DE DATOS - VIVIENDA",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1607020781",
+  "nombre": "Formulario de Subsidio",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1607020853",
+  "nombre": "Boletas de Pago y Aportes",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1607020994",
+  "nombre": "Auxiliar de Vivienda de Interés Social",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1607021019",
+  "nombre": "Jefe de Viviendas",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1607546448",
+  "nombre": "Líder de area",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1607723814",
+  "nombre": "Fecha de respuesta área",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1608161246",
+  "nombre": "Responsable de Agencia de Viajes",
+  "tipo": "employee",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1608165007",
+  "nombre": "Responsable de Recreación y Deportes",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1608165062",
+  "nombre": "Otro Encargado",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1608672218228",
+  "nombre": "Tipo De Subsidio",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1609165189",
+  "nombre": "Presupuesto para Evento",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1609175298",
+  "nombre": "# De Participantes",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1609175324",
+  "nombre": "RFQ (Opcional)",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610396705",
+  "nombre": "Razón Social Confidencial?",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610396879",
+  "nombre": "Nombre del Cargo",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610396946",
+  "nombre": "Cursos Requeridos",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610397231",
+  "nombre": "Tipo de Contrato",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610397313",
+  "nombre": "Otro tipo de Contrato",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610397438",
+  "nombre": "Fecha Limite para Envío de Candidatos",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610397798",
+  "nombre": "Documentos Adjuntos",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1610398312",
+  "nombre": "Tipo de Documento Adjunto",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610398734",
+  "nombre": "Evaluación de experiencia",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1610400281",
+  "nombre": "Área de Conocimiento",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610400413",
+  "nombre": "Mes y Año de Graduación",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610400468",
+  "nombre": "Cargo de su última experiencia laboral",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610400580",
+  "nombre": "Fecha de ingreso ultima experiencia",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610400682",
+  "nombre": "Fecha de retiro ultima experiencia",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610400751",
+  "nombre": "Cursos Vigentes",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610400793",
+  "nombre": "Cargos laborales de interés",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610475560",
+  "nombre": "DICCIONARIO DE DATOS - RECREACIÓN Y DEPORTES",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610475887",
+  "nombre": "Portafolio de Servicios",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610475953",
+  "nombre": "Descripción de la Actividad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610476097",
+  "nombre": "Número de Participantes",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610476225",
+  "nombre": "Niños o Adultos",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610476373",
+  "nombre": "Tiempo de Duración Solicitado (Si Aplica)",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610476429",
+  "nombre": "Afiliado o Particular",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610837755",
+  "nombre": "Documentos informativo del  cliente",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1610979172",
+  "nombre": "DICCIONARIO DE  DATOS -AFILIACIONES",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610979355",
+  "nombre": "Responsable Afiliaciones",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610993381",
+  "nombre": "Solicitudes Subsidio Familiar",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1610994230",
+  "nombre": "Solicitudes de aportes y afiliaciones",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611001708",
+  "nombre": "Solicitud de certificados",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611005237",
+  "nombre": "¿Persona natural o Juridica?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611007199",
+  "nombre": "Portafolio de Servicios Recreación y Deportes",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611007790",
+  "nombre": "Portafolio Zona Recreativa",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611066170224",
+  "nombre": "Descripción de la Actividad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611066334653",
+  "nombre": "Servicios que desea incluir",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611066371663",
+  "nombre": "Fecha Estimada",
+  "tipo": "date",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1611066674",
+  "nombre": "Presupuesto estimado",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611066695",
+  "nombre": "Servicios que desea incluir",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611078178",
+  "nombre": "Dirección y Barrio de Residencia",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611078326",
+  "nombre": "¿Se Reconoce como parte una población focalizada?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611078342",
+  "nombre": "Tipo de discapacidad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611078359",
+  "nombre": "Institución Educativa",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611078389",
+  "nombre": "Empresa donde laboró",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611078411",
+  "nombre": "Institución",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611078432",
+  "nombre": "Duración en horas del curso",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611078462",
+  "nombre": "Fecha de certificación del curso",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611157403",
+  "nombre": "Empresa solicitante",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611325032",
+  "nombre": "¿Consulta o Reserva?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611336510",
+  "nombre": "Tipo de Solicitud  (BE)",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611336655",
+  "nombre": "¿Cuál es tu necesidad?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611338190",
+  "nombre": "¿Tipo de Solicitud?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611348419",
+  "nombre": "Hoja de Vida",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611349059",
+  "nombre": "Tipo de Documento",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611349430",
+  "nombre": "Naturaleza",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611349795",
+  "nombre": "Tipo de Empresa",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611530378",
+  "nombre": "Tamaño por Número de Empleados",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611678753",
+  "nombre": "Fecha para el formulario",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611678825",
+  "nombre": "Responsable Radicación",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611678907",
+  "nombre": "Responsable IT",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611679758",
+  "nombre": "Datos de compañía y contacto actualizados?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611696219",
+  "nombre": "Ciudad o municipio donde opera su empresa:",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611760510",
+  "nombre": "¿Tiene Personal a Cargo?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611760540",
+  "nombre": "¿Se requiere viajar por trabajo?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611760578",
+  "nombre": "Número de puestos de trabajo requeridos",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611760625",
+  "nombre": "Descripción de la vacante",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611760815",
+  "nombre": "Mínimo Nivel de Estudio",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611760849",
+  "nombre": "¿Graduado?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611760901",
+  "nombre": "¿Requiere experiencia relacionada?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611760951",
+  "nombre": "Rango de experiencia mínima",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611760980",
+  "nombre": "Requiere capacitación especifica",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611761002",
+  "nombre": "Descripción de la capacitación especifica",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611761038",
+  "nombre": "¿Vacante susceptible a teletrabajo?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611763148",
+  "nombre": "Fecha estimada de incorporación al cargo",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611763283",
+  "nombre": "Salario Mensual",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611763318",
+  "nombre": "Jornada Laboral",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611763351",
+  "nombre": "Nuevo Campo",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611763412",
+  "nombre": "Ubicación puestos de trabajo",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611764288",
+  "nombre": "¿Se requiere trabajo suplementario?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611764445",
+  "nombre": "Formación o titulo requerido",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611765644",
+  "nombre": "Tipo de Solicitud",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611766291",
+  "nombre": "¿Posee experiencia laboral?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611766314",
+  "nombre": "¿Labora Actualmente?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611766781",
+  "nombre": "¿Posee cursos adicionales?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611775243",
+  "nombre": "Tipo de Solcitud",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611775355",
+  "nombre": "¿Qué información necesitas?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611786737",
+  "nombre": "Hoteles",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611790816",
+  "nombre": "Numero de Radicación",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611940300",
+  "nombre": "Representante Legal",
+  "tipo": "crm",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1611946789",
+  "nombre": "RUT/NIT/CÉDULA",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1612119944",
+  "nombre": "Fercha de Apertura PQRSF",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1612120001",
+  "nombre": "Fecha de respuesta al cliente",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1612193797130",
+  "nombre": "Orientación laboral?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1612210077",
+  "nombre": "Solución 1er Nivel",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1612295184026",
+  "nombre": "Enviar a Registro?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1613745846715",
+  "nombre": "Consecutivo SISU",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1614962296",
+  "nombre": "# Días para respuesta afiliado",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1614962836",
+  "nombre": "# Dias solución area",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626964805",
+  "nombre": "Tipo de Vinculación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626965060",
+  "nombre": "Valor Solicitado",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626965577",
+  "nombre": "Número de Cuotas",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626965938",
+  "nombre": "Línea de crédito solicitada",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626966096",
+  "nombre": "Lugar de Expedición",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626966380",
+  "nombre": "Tipo de Vivienda",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626966414",
+  "nombre": "(AFI)Barrio o vereda",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626966710",
+  "nombre": "Localidad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968141",
+  "nombre": "Estrato",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968196",
+  "nombre": "Tiempo en la Residencia (Años)",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968229",
+  "nombre": "Nombre del Arrendador",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968259",
+  "nombre": "Teléfono del Arrendador",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968319",
+  "nombre": "Ciudad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968472",
+  "nombre": "Nombre de la empresa anterior",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968487",
+  "nombre": "Cargo Anterior",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968500",
+  "nombre": "Antigüedad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968523",
+  "nombre": "Teléfono empresa anterior",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968602",
+  "nombre": "Tipo de documento del Conyugue o Compañero(a) permanente",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968646",
+  "nombre": "No. de identificación del conyugue",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968685",
+  "nombre": "Teléfono del Conyugue",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968706",
+  "nombre": "Celular del conyugue",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968727",
+  "nombre": "Apellidos del conyugue",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968860",
+  "nombre": "Nombre del conyugue",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968878",
+  "nombre": "Ocupación del conyugue",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968889",
+  "nombre": "Empresa del conyugue",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968935",
+  "nombre": "Dirección empresa del conyugue",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968957",
+  "nombre": "Teléfono empresa del conyugue",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968975",
+  "nombre": "Cargo conyugue",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626968996",
+  "nombre": "Antigüedad conyugue",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969002",
+  "nombre": "Antigüedad conyugue",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969041",
+  "nombre": "Sueldo",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969062",
+  "nombre": "Otros Nómina",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969081",
+  "nombre": "Otros Ingresos",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969107",
+  "nombre": "Arriendo",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969158",
+  "nombre": "Amortización de créditos o hipotecas",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969185",
+  "nombre": "Tarjetas de Crédito",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969206",
+  "nombre": "Descuentos de Nómina",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969224",
+  "nombre": "Sostenimiento Familiar",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969278",
+  "nombre": "Otros Gastos",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969338",
+  "nombre": "Total Ingresos",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969362",
+  "nombre": "Total Egresos",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969409",
+  "nombre": "Descripción otros ingresos",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969440",
+  "nombre": "¿Es declarante?",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969480",
+  "nombre": "Nombre Referencia Familiar",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1626969502",
+  "nombre": "Dirección referencia familiar",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1626969522",
+  "nombre": "Ciudad referencia familiar",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1626969552",
+  "nombre": "Celular referencia familiar",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1626969589",
+  "nombre": "Nombre referencia personal",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969633",
+  "nombre": "Dirección referencia personal",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969650",
+  "nombre": "Ciudad referencia personal",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969687",
+  "nombre": "Celular referencia personal",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969780",
+  "nombre": "Tipo de inmueble",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969837",
+  "nombre": "Valor comercial",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969859",
+  "nombre": "Ciudad del inmueble",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969883",
+  "nombre": "¿Posee hipoteca?",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969902",
+  "nombre": "Dirección del inmueble",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969944",
+  "nombre": "A favor de:",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1626969967",
+  "nombre": "Saldo",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627046487",
+  "nombre": "Plazo Inmueble",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627046526",
+  "nombre": "¿Posee Vehículo?",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627046551",
+  "nombre": "Marca y Modelo",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627046610",
+  "nombre": "Placa",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627046648",
+  "nombre": "Valor comercial vehículo",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627046686",
+  "nombre": "Reserva dominio",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627046717",
+  "nombre": "A favor de: (Vehiculo)",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627046746",
+  "nombre": "Saldo (vehículo):",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627046777",
+  "nombre": "Cuota (Vehículo):",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627046838",
+  "nombre": "Autorizo que el desembolso de mi crédito se realice de la siguiente manera:",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627047015",
+  "nombre": "Forma de desembolso",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627047131",
+  "nombre": "Tipo de cuenta",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627047224",
+  "nombre": "Número de cuenta",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627047250",
+  "nombre": "Ciudad cuenta",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627047380",
+  "nombre": "Formulario de solicitud con firma y huella legible",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1627051144",
+  "nombre": "Dirección de la empresa",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627053036",
+  "nombre": "Teléfono Empresa",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1627512660",
+  "nombre": "Banco",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1654029711434",
+  "nombre": "Oficio de respuesta",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1654030297457",
+  "nombre": "Link Oficio de Respuesta",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1666711175403",
+  "nombre": "(FT) Modalidad de contacto",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1666711254024",
+  "nombre": "(FT) Carta de solicitud de retiro",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1666711277569",
+  "nombre": "(FT) Paz y salvo",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1666799919",
+  "nombre": "Link del contacto",
+  "tipo": "crm",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1680036136854",
+  "nombre": "CPI",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1682110374280",
+  "nombre": "Copia documento identidad al 150%",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1682110406979",
+  "nombre": "Dos últimos desprendibles de nómina",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1682110426082",
+  "nombre": "Certificación laboral no mayor a 30 días",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1682110448905",
+  "nombre": "Anexos (formato asegurabilidad y/o soportes otras líneas de crédito)",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1684963917747",
+  "nombre": "La solicitud se puede",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1685660679072",
+  "nombre": "Plantilla análisis",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1696347331942",
+  "nombre": "Orden de compra",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1696864651122",
+  "nombre": "BROCHURE",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697214104",
+  "nombre": "Apartamento",
+  "tipo": "crm",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697214165820",
+  "nombre": "Proyecto (*)",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697219516663",
+  "nombre": "Cuota Inicial",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697220103305",
+  "nombre": "Valor Separacion",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697220136887",
+  "nombre": "Fecha de separacion",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697220149289",
+  "nombre": "Valor Cuotas",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697220209310",
+  "nombre": "Fecha cuotas extraordinarias",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697220224259",
+  "nombre": "Valor cuotas extraordinarias",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697220240221",
+  "nombre": "Valor subsidio de vivienda CCF",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697220258717",
+  "nombre": "Valor Ahorros",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697220268977",
+  "nombre": "Valor Cesantías",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697220285204",
+  "nombre": "Valor crédito hipotecario",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697220430678",
+  "nombre": "Cotización aprobada por el cliente",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697220462361",
+  "nombre": "Documentos Adicionales",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1697220564126",
+  "nombre": "Comprobante de pago de separacion",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1697220615517",
+  "nombre": "Comisión perdida",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697649364854",
+  "nombre": "Cotización aprobada",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697654392292",
+  "nombre": "Fecha aproximada de entrega",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697655233318",
+  "nombre": "numero de cuotas extraordinarias",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697657524764",
+  "nombre": "subsidio CCF",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697657599386",
+  "nombre": "Valor cuota inicial",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697657869935",
+  "nombre": "valor credito Hip. preaprobado",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697657917922",
+  "nombre": "Intereses de Subrogación",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1697657955284",
+  "nombre": "Gastos de Escrituración",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1698155484372",
+  "nombre": "VENTA",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1698155679428",
+  "nombre": "Tipo de vinculacion",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1698437318160",
+  "nombre": "solicita vinculacion",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1698437559401",
+  "nombre": "Nueva lista",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1699472445255",
+  "nombre": "¿Afiliado a Comfacundi?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1699472962324",
+  "nombre": "Fecha y hora del evento",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1699473072167",
+  "nombre": "Tipo de escenario requerido",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1699473199055",
+  "nombre": "Forma de contacto preferida",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1699473264603",
+  "nombre": "Nombre del Convenio o Empresa",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1699473624",
+  "nombre": "Diligenciado por:",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1699474802653",
+  "nombre": "Soporte de pago",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1699474938513",
+  "nombre": "Orden de servicio",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1700512186550",
+  "nombre": "Notificación final usuario",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1703810377631",
+  "nombre": "Nivel Resarcimiento",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1703810459698",
+  "nombre": "Nivel de Criticidad (PQRSF)",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1703810507138",
+  "nombre": "Etapa Resarcimiento",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1716774901407",
+  "nombre": "Torre",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1716774921286",
+  "nombre": "Apartamento",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1716774942174",
+  "nombre": "Valor Apartamento",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1716774969429",
+  "nombre": "Cuota Inicial (30%)",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1716775024395",
+  "nombre": "Valor Separación",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1716775073010",
+  "nombre": "Valor de Cuotas*",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1716775119523",
+  "nombre": "Cuotas Extraordinarias*",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1716775728691",
+  "nombre": "Valor Comisión",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1722633272005",
+  "nombre": "Cotización",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1724344114811",
+  "nombre": "¿Se realizó visita CESAP?",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1724344215427",
+  "nombre": "¿Se realizó visita CESAP?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1724344255370",
+  "nombre": "¿Se realizó visita CLUB SER?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1724344325618",
+  "nombre": "Fecha de inicio de convenio",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1724344361458",
+  "nombre": "Fecha de renovación",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1724797738",
+  "nombre": "Participante",
+  "tipo": "employee",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1724949023",
+  "nombre": "Nombre y apellidos completos",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1724949520",
+  "nombre": "AF- Correo electrónico",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1724949638",
+  "nombre": "(AFI) Teléfono de contacto",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1725054770437",
+  "nombre": "Etapa Perdida",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1725286062482",
+  "nombre": "Cotización Múltiple",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1725286515712",
+  "nombre": "Lista de origen de la información",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1725288091",
+  "nombre": "Fecha de nacimiento",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1725288431",
+  "nombre": "Aporte pensionado %",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1725288549",
+  "nombre": "Estado de Afiliación pensionado",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1725288667",
+  "nombre": "Categoría de Afiliación Pensionados",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1726179078486",
+  "nombre": "Adjuntar Contrato",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1726250656524",
+  "nombre": "Cédula del representante legal",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1726250678133",
+  "nombre": "RUT",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1726250875750",
+  "nombre": "¿Por qué no esta interesado en firmar alianza comercial?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1726504221",
+  "nombre": "Proyecto de Vivienda (V).",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727121581",
+  "nombre": "Nombre del contacto",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727284075",
+  "nombre": "Curso de interés",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727287792",
+  "nombre": "Tipo de carta",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727287818",
+  "nombre": "Responsable firma de las garantias",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727966365",
+  "nombre": "Trabajadores",
+  "tipo": "integer",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727966503",
+  "nombre": "Fecha próxima llamada",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727967681",
+  "nombre": "Primer contacto",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1727969764",
+  "nombre": "Cantidad de llamadas realizadas",
+  "tipo": "integer",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727969838",
+  "nombre": "Retroalimentación de llamadas",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727969842",
+  "nombre": "Retroalimentación de llamadas",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727970317",
+  "nombre": "Retroalimentación del contrato",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727970585",
+  "nombre": "Fecha de entrega de paz y salvo",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727972553",
+  "nombre": "Fecha de cita",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727972556",
+  "nombre": "Fecha de cita",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727972856",
+  "nombre": "¿Envió de portafolio?",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727974102",
+  "nombre": "Costo total de Afiliación",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727976367",
+  "nombre": "En caso de emergencia contactar a:",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727984190",
+  "nombre": "Estrategia de afiliación",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727984192",
+  "nombre": "Estrategia",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727984195",
+  "nombre": "Estrategia",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727984198",
+  "nombre": "Estrategia",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727984204",
+  "nombre": "Estrategia",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1727989050",
+  "nombre": "Marqué si está reportado",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728424030",
+  "nombre": "Prioridad",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728424102",
+  "nombre": "Nombre del contrato",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728489223",
+  "nombre": "Clausulas especiales",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728495762",
+  "nombre": "SI ACEPTA TTO DATOS",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728495765",
+  "nombre": "SI ACEPTA TTO DATOS",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728591486",
+  "nombre": "Estado de Aprobación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728661998",
+  "nombre": "Contratista",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728662050",
+  "nombre": "Objeto del contrato",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728662269",
+  "nombre": "Plazo",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728662359",
+  "nombre": "Cédula del contratista",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728662473",
+  "nombre": "Ciudad de expedición cédula",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728663422",
+  "nombre": "Clausula primera",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1728663446",
+  "nombre": "Clausula segunda",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1729187532",
+  "nombre": "Logos",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1729187574",
+  "nombre": "Pacto comercial",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1729262467",
+  "nombre": "Suministro o actividad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1729290001",
+  "nombre": "AF- Cédula del representante legal",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1733936261",
+  "nombre": "Unidad de servicio",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1733936266",
+  "nombre": "Nuevo Campo",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1733936402",
+  "nombre": "Canal de Ingreso",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736822691433",
+  "nombre": "No Contesta",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736822849246",
+  "nombre": "Contacto primer cita",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736822878025",
+  "nombre": "Cargo",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736822918422",
+  "nombre": "Teléfono",
+  "tipo": "double",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1736822945380",
+  "nombre": "Correo",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736822975464",
+  "nombre": "Número de Empleados",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736823322",
+  "nombre": "Contacto Tomador Decisión",
+  "tipo": "crm",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736823703556",
+  "nombre": "(AFI) Caja de Compensación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736823759511",
+  "nombre": "Fecha de Radicación",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736823793153",
+  "nombre": "Documento Paz y Salvo",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1736824141661",
+  "nombre": "Documentación",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1736824199646",
+  "nombre": "Documentación para Radicar Afiliación",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1736824304",
+  "nombre": "(FT) Profesional Fidelización",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736824399970",
+  "nombre": "Aportes",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736824524354",
+  "nombre": "De Acuerdo *eliminar*",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736824579960",
+  "nombre": "De Acuerdo",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736883906818",
+  "nombre": "Nombre Base de Datos",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736884032144",
+  "nombre": "Comentario de Contacto",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736884281392",
+  "nombre": "Número de Empleados Final",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736884354366",
+  "nombre": "Acuerdos Adicionales",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736884488054",
+  "nombre": "Proyección de Aportes *eliminar*",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736884700740",
+  "nombre": "Proyección Trabajadores",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736985727266",
+  "nombre": "Cerrado Perdido",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736985757462",
+  "nombre": "Comentario Cerrado Perdido",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986546103",
+  "nombre": "Fecha Etapa 1",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986572693",
+  "nombre": "Fecha Etapa 2",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986590714",
+  "nombre": "Fecha Etapa 3",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986606973",
+  "nombre": "Fecha Etapa 4",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986623741",
+  "nombre": "Fecha Etapa 5",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986640131",
+  "nombre": "Fecha Etapa 6",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986657355",
+  "nombre": "Fecha Etapa 7",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986672228",
+  "nombre": "Fecha Etapa 8",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986696030",
+  "nombre": "Fecha Etapa 9",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986732615",
+  "nombre": "Fecha Etapa 10",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986748096",
+  "nombre": "Fecha Etapa 11",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736986763312",
+  "nombre": "Fecha Etapa 12",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736988388321",
+  "nombre": "Dirección de la Cita",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1736988423960",
+  "nombre": "Fecha y Hora de la Cita",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1740775120415",
+  "nombre": "Agendamiento Reunión",
+  "tipo": "resourcebooking",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1742403057680",
+  "nombre": "Fecha de primer Aporte",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1742920849",
+  "nombre": "Categoría: Reclamos",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1742920851",
+  "nombre": "Categoría: Quejas",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1742922025",
+  "nombre": "Nuevo Campo",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1742922031",
+  "nombre": "Tipología",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1742922290",
+  "nombre": "Subtipología - antigua",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1743689404",
+  "nombre": "(AFI) Nit Empresa",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1743689782",
+  "nombre": "(AFI) # Trabajadores",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1743689988",
+  "nombre": "Nombre Representante legal Afiliacion",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1743690051",
+  "nombre": "Telefono - afiliacion",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1743690121",
+  "nombre": "Celular Empresa No.1",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1743690139",
+  "nombre": "Celular Empresa No.2",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1743690158",
+  "nombre": "Celular Empresa No.3",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1743690187",
+  "nombre": "Correo Electronico Empresa",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1743690289",
+  "nombre": "Comentario Empresa -Afiliacion",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1743690427",
+  "nombre": "Base de datos - Afiliacion",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1748278154448",
+  "nombre": "Origen de Afiliación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749055534895",
+  "nombre": "(CRE)Tasa de interés",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749056465308",
+  "nombre": "(CRE)Verificación Documentos Crédito",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749056783805",
+  "nombre": "(CRE)Verificación Contacto",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749056952807",
+  "nombre": "(CRE)Resultado del análisis",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749057010582",
+  "nombre": "(CRE)Monto propuesto",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749057039447",
+  "nombre": "(CRE)Plazo propuesto",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749057070055",
+  "nombre": "(CRE)Documento de Análisis de Crédito",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749057152199",
+  "nombre": "(CRE)Comité",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749057494538",
+  "nombre": "(CRE)Decisión del comité",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749057545961",
+  "nombre": "(CRE)Monto aprobado",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749057575889",
+  "nombre": "(CRE)Plazo aprobado",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749057601121",
+  "nombre": "(CRE)(CON)Acta del comité",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749057811392",
+  "nombre": "(CRE)Verificación Garantías",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749065792048",
+  "nombre": "Nueva lista",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749068423307",
+  "nombre": "(CRE)Número del crédito",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749068485180",
+  "nombre": "(CRE)Garantía",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749069135790",
+  "nombre": "(CRE)(CON) Revisado por proceso",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749069434623",
+  "nombre": "(CRE)Comprobante Desembolso",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749241991373",
+  "nombre": "(CRE)Motivo desistimiento",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1749242117257",
+  "nombre": "(CRE)Motivo",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750690714874",
+  "nombre": "Nuevo número",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750691326371",
+  "nombre": "Q(INS) RUT",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750691401851",
+  "nombre": "Q(INS) Certificado de Existencia y Representación",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750691441265",
+  "nombre": "Q(INS) Copia Cédula Representante Legal",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750691484071",
+  "nombre": "Q(INS) (CRE) Certificación bancaria",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750691636625",
+  "nombre": "(INS) Requisitos Legales",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750691675722",
+  "nombre": "Q(INS) Certificación ARL Razón Social",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750691716258",
+  "nombre": "Q(INS) Consulta de inhabilidades y delitos sexuales",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750691761053",
+  "nombre": "Q(INS) Antecedentes Personería Rep. Legal **",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750691845014",
+  "nombre": "Q(INS) Antecedentes Contraloría Rep. Legal",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750691888314",
+  "nombre": "Q(INS) Antecedentes Contraloría Razón social",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750692036418",
+  "nombre": "Q(INS) Antecedentes Procuraduría Representante Legal",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750692110293",
+  "nombre": "Q(INS) Antecedentes Procuraduría Razón Social",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750692192550",
+  "nombre": "Q(INS) Antecedentes Policía",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750692252524",
+  "nombre": "Q(INS) Antecedentes Medidas Correctivas",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750692320124",
+  "nombre": "Q(INS) Consulta OFAC Representante Legal",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750692362086",
+  "nombre": "Q(INS) Consulta OFAC Razón Social",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1750692397486",
+  "nombre": "(INS) Consulta OFAC",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1751922744607",
+  "nombre": "Q(INS) Estados financieros",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1751922823722",
+  "nombre": "Q(INS) Otros documentos",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1751923620612",
+  "nombre": "Q(INS) Certificado afiliación a EPS",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1751923922435",
+  "nombre": "Q(INS) Certificado afiliación a Fondo de Pensiones",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1751998676090",
+  "nombre": "(PVI) Documentos oferente",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1751998726496",
+  "nombre": "(PVI) Documentos del Proyecto",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1751998767958",
+  "nombre": "(MER) (PVI) Documentos de la fiduciaria",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1751998812483",
+  "nombre": "(PVI) Nombre del proyecto",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1752510407",
+  "nombre": "Q(INS) Referencias laborales",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1753285908",
+  "nombre": "(MER) (CRE) Monto del crédito 1",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753384992",
+  "nombre": "(CRE) Asesor asignado",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753390507",
+  "nombre": "Q(INS) Documentación cumple requisitos",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753390725",
+  "nombre": "(INS) Pendientes",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753823738",
+  "nombre": ".(COS) Área solicitante",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753823865",
+  "nombre": "(CON) Tipo de solicitud",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753823970",
+  "nombre": "(CON) Modalidad",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753825115",
+  "nombre": "(CON) Otro lugar de prestación",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753825378",
+  "nombre": "(CON) Gestor técnico",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753825417",
+  "nombre": "(CON) Gestor administrativo",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753825498",
+  "nombre": "(CON) Obligaciones específicas del contratista",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1753825526",
+  "nombre": "(CON) Obligaciones específicas la entidad",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1753894824",
+  "nombre": "(CON) Proveedores",
+  "tipo": "crm",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1753895272",
+  "nombre": "(CRE) Verificación Documentos Recibidos.",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753896247",
+  "nombre": "(CON) Referencia de proveedor",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1753896491",
+  "nombre": "(CON) Cotizaciones",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1753896631",
+  "nombre": "(CON) Validación cotizaciones",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753896713",
+  "nombre": "(CON) Cotización sugerida",
+  "tipo": "crm",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753896780",
+  "nombre": "(CON) Definición modalidad",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753971912",
+  "nombre": "(CRE) Línea de crédito",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1753972077",
+  "nombre": "(CRE) Plazo",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1754063720",
+  "nombre": "(CRE)Documentación Pendiente",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1754344109",
+  "nombre": "(CRE) Auxiliar responsable",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1754344112",
+  "nombre": "(CRE) Analista responsable",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1754427115",
+  "nombre": "Q(INS) Verifica actualización",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1754493907",
+  "nombre": "(CON) Decisión del Consejo Directivo",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1755009677",
+  "nombre": "(CRE) Correo enviado",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1755267237",
+  "nombre": "1. ¿Qué proceso deseas intervenir?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1755267322",
+  "nombre": "1. ¿Cuales son los dolores e ineficiencias?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1755267387",
+  "nombre": "1. ¿Quiénes son los involucrados?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1755267466",
+  "nombre": "1. ¿Cuáles son los pasos del proceso?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1755267506",
+  "nombre": "1. ¿Qué datos están involucrados?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1755267573",
+  "nombre": "1. ¿Qué herramientas utilizas?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1755273351",
+  "nombre": "1.¿Qué información está involucrada?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1755709381",
+  "nombre": "(CRE)Verificación de desembolso.",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1756139580",
+  "nombre": "(FT) Tipo de empresa",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1756152328",
+  "nombre": "(FT) Analista Fidelización",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1756152970",
+  "nombre": "(FT) Carta Desistimiento",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1756153029",
+  "nombre": "(FT) Convenio de libranza",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1756315529",
+  "nombre": "(CRE)Desistido por",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1756846784",
+  "nombre": "(CRE)(CON)Documentos Adicionales",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1757439641",
+  "nombre": "(CRE)Recoge Crédito",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1757439756",
+  "nombre": "(CRE)Número Crédito Recogido",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1757455049",
+  "nombre": "(CRE) Línea de crédito aprobada",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1757455059",
+  "nombre": "(CRE) Línea de crédito propuesta",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1757515737",
+  "nombre": "CRE)Observaciones del Comité",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1757519285",
+  "nombre": "CRE)Observaciones de las garantías",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1757617751",
+  "nombre": "(CRE)Etapa",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1757689498",
+  "nombre": "(CRE)Observaciones del análisis",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1757690072",
+  "nombre": "(CRE)Consecutivo SISU",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1758039907",
+  "nombre": "Operador Logístico",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1758040195",
+  "nombre": "Numero de Factura",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1758041562",
+  "nombre": "Valor Base de Venta",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1758041677",
+  "nombre": "% Comisión",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1758041766",
+  "nombre": "Valor total de Comisión",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1758044949",
+  "nombre": "N° comprobante de pago",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1758301166",
+  "nombre": "(CRE)Motivo anulación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1758554382",
+  "nombre": "(CRE)Formato Solicitud",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1758554426",
+  "nombre": "(CRE)Recibo de matrícula",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1758554489",
+  "nombre": "(CRE)Cotización turismo",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1758556956",
+  "nombre": "(CRE)Desprendibles de nómina",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1758557084",
+  "nombre": "(CRE)Documentos adicionales",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1758568440",
+  "nombre": "(CRE)Asegurabilidad",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759788012",
+  "nombre": "(CON) Información subsanada",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759844889",
+  "nombre": "(CON)Número de CDP",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759845628",
+  "nombre": "(CON) No. de documento de análisis",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759845717",
+  "nombre": "(CON) Valor de la cuantia",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759845867",
+  "nombre": "(CON) Certificado de aprobación de presupuesto",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759851709",
+  "nombre": "(CON) Número acta comité",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759852051",
+  "nombre": "(CON) Cuantía",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759852618",
+  "nombre": "(CON) IMPUESTOS",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1759852664",
+  "nombre": "(CON) Cuáles otros?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759854893",
+  "nombre": "(CON) Valor anticipo",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759894598",
+  "nombre": "(CON) Número de pagos",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759894737",
+  "nombre": "(CON) % de anticipo",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759897067",
+  "nombre": "(CON) Valor por cuota",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759951146753",
+  "nombre": "300107 -ALIMENTOS Y BEBIDAS HOTEL RIVIERA RICAURTE",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1759951175354",
+  "nombre": "200107 -HOTEL RIVIERA RICAURTE",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1760023402",
+  "nombre": "(CRE)Términos y condiciones",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1760023591",
+  "nombre": "(CRE)Envío de garantías",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1760474323",
+  "nombre": "(CON) Anticipo",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1760548690",
+  "nombre": "(CON) Seguimiento de compra",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1760556257",
+  "nombre": "Contrato pro forma",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1760556273",
+  "nombre": "(CON) Contrato pro forma",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1760556329",
+  "nombre": "(CON) Observaciones al contrato",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1760556465",
+  "nombre": "(CON) Número de contrato",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1760556603",
+  "nombre": "(CON) El contrato se puede firmar?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1760559275",
+  "nombre": "(CON) Contrato",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761059492",
+  "nombre": "(LOG) Valores",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761059976",
+  "nombre": "(LOG) Etapa",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761060073",
+  "nombre": "(LOG) Etapa cambiada por",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761060111",
+  "nombre": "(LOG) Flujo",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761079579",
+  "nombre": "(LOG) Archivos",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1761145880",
+  "nombre": "(CON) ¿Contrato con mensualidades?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761231344",
+  "nombre": "(LOG) ID Negociación",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761252190",
+  "nombre": "(CRE)Etapa actual",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761252226",
+  "nombre": "(CRE)Etapa anterior",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761252580",
+  "nombre": "(LOG) Etapa anterior",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761684811",
+  "nombre": "(CRE)Cerrado",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761853076",
+  "nombre": "(CON) Centro de costos",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1761924677",
+  "nombre": "(CON) Número de solicitud",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761926267",
+  "nombre": "(CON) Garantías exigidas",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1761930222",
+  "nombre": "(CON) Número de póliza",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1761930414",
+  "nombre": "(CON) Aseguradora",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762271055",
+  "nombre": "(CON) Fecha de expedición",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762271755",
+  "nombre": "(CON) Requiere garantías",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762275852",
+  "nombre": "(MER) (CON) Fecha de finalización",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762292238",
+  "nombre": "(LEG) Tipo de solicitud legal",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762358045",
+  "nombre": "(CON) Monto autorizado",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762358137",
+  "nombre": "(CON) Objeto del contrato",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762359239",
+  "nombre": "(CON) Observaciones al seguimiento del contrato",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762445667",
+  "nombre": "(MER) (CON) Fecha de inicio",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762446610",
+  "nombre": "(CON) Interventor",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762460187",
+  "nombre": "(CON) Modificación No.",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762460238",
+  "nombre": "(CON) Objeto de la Modificación",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762460312",
+  "nombre": "(CON) Documentos que se anexan",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1762460503",
+  "nombre": "(CON) Observaciones a la modificación",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1762461941",
+  "nombre": "(CON) Archivos modificaciones",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1762724389",
+  "nombre": "(CON) Decisión aprobación Jurídica",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762728782",
+  "nombre": "(CON) Valor adiciones",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762728913",
+  "nombre": "(CON) Valor total",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762729072",
+  "nombre": "(CON) Tiempo adiciones",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762729185",
+  "nombre": "(CON) Tiempo total ejecutado",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762729320",
+  "nombre": "(CON) Valor pagado al contratista",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762729386",
+  "nombre": "(CON) Saldo a favor del contratista",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762729454",
+  "nombre": "(CON) Saldo a favor de Comfacundi",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762733221",
+  "nombre": "(CON) Completitud de la ejecución",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762733739",
+  "nombre": "(CON) Forma de liquidación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762878235",
+  "nombre": "(CON) Validación apoyo logístico",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762890703",
+  "nombre": "(CON) Documento decisión del Consejo Directivo",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762898018",
+  "nombre": "(CON) Documentos que se anexan (texto)",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1762901383",
+  "nombre": "(CON) Documento orden de compra",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1763047640",
+  "nombre": "(CON) Lista documentos liquidación",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1763047747",
+  "nombre": "(CON) Archivos liquidación",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1763060986",
+  "nombre": "(CON) Justificación de la necesidad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1763061028",
+  "nombre": "(CON) Descripción de producto",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1764091055",
+  "nombre": "(CON) Aceptación de la póliza",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1764099487",
+  "nombre": "(CRE)Observaciones Términos y Condiciones",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1764099575",
+  "nombre": "(CRE)Observaciones generación de garantías",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1764099664",
+  "nombre": "(CRE)Observaciones de asegurabilidad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1764168175",
+  "nombre": "(CON) Contrato Liquidado",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765483064",
+  "nombre": "(CON) Acta de Inicio",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765486999301",
+  "nombre": "(CON) Valor por cuota (A)",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765487066485",
+  "nombre": "(CON) Valor Anticipo (A)",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765812845",
+  "nombre": "(AFI) Localidades Bogotá",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765813289",
+  "nombre": "(AFI) Municipios Cundinamarca",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765825707",
+  "nombre": "(CON) Aceptación gestor técnico",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765825779",
+  "nombre": "(CON) Aceptación gestor administrativo",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765825858",
+  "nombre": "(CON) Observaciones a la gestión",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765896412",
+  "nombre": "(CON) Se ajusto el contrato?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765896463",
+  "nombre": "(CON) Observaciones de ajuste al contrato",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765896624",
+  "nombre": "(CON) Vigencia garantías",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1765896698",
+  "nombre": "(CON) Vigencia garantías prestaciones sociales",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1766085549",
+  "nombre": "(CON) Validación Acta Inicio",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1766086639",
+  "nombre": "(CON) Observaciones Acta Inicio",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1766090901",
+  "nombre": "(CON) Documento Informe de avance",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1766090969",
+  "nombre": "(CON) Fecha programación de pago",
+  "tipo": "date",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1766115285",
+  "nombre": "(CON) Actividades desarrolladas",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1766116514",
+  "nombre": "(CON) Aceptación liquidación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1766157542",
+  "nombre": "(CON) Observaciones Aceptación liquidación",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1766358041",
+  "nombre": "(CON) Aceptación de garantías",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1769810611514",
+  "nombre": "E-mail",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1770062368918",
+  "nombre": "CONTADOR DE ESCALAMIENTO",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1770062495933",
+  "nombre": "FECHA Y HORA DE ASIGNACION BO 1",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1770062506396",
+  "nombre": "FECHA Y HORA DE ASIGNACION BO 2",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1770062516210",
+  "nombre": "FECHA Y HORA DE ASIGNACION BO 3",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1770062556521",
+  "nombre": "FECHA Y HORA DE RESOLUCION BO 1",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1770062573362",
+  "nombre": "FECHA Y HORA DE RESOLUCION BO2",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1770062585590",
+  "nombre": "FECHA Y HORA DE RESOLUCION BO3",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1770389389000",
+  "nombre": "Consecutivo",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1771013868228",
+  "nombre": "ASISTENCIA",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1771014399431",
+  "nombre": "EVENTO AL CUAL ASISTIO",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1773167975110",
+  "nombre": "Adjuntar archivos",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1773782778",
+  "nombre": "(CON) Validación subdirección",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1774035537",
+  "nombre": "Documentos Anexos",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1774388630",
+  "nombre": "(MER) (HEX) (INS) (CON) Observaciones",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1774966624398",
+  "nombre": "Observaciones contrato",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1774984463",
+  "nombre": "(CON) Verificación Presupuestal",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1775588808",
+  "nombre": "(CON) Monto por Centro de Costo",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1775668160",
+  "nombre": "(CON) Abogado asignado",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776093809",
+  "nombre": "(EXP) Tipo Aportante",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776308415",
+  "nombre": "(SDC) Comprobante / Soporte de pago",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1776308546",
+  "nombre": "(SDC) Fecha de pago",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776308647",
+  "nombre": "(SDC) Estado de la revisión",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776308693",
+  "nombre": "(SDC) Documentos soporte",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1776308736",
+  "nombre": "(SDC) Valor total para desembolsar",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776309249",
+  "nombre": "Cantidad de subsidios a cobrar (SDC)",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776370374",
+  "nombre": "(CON) Aprobación orden de compra",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776436998",
+  "nombre": "(CON) Motivo de no aprobación presupuestal",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1776704016",
+  "nombre": "(CON) Procedencia de recursos",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776722820",
+  "nombre": "(AFI) Afiliación primera vez o cambio de caja",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776723412",
+  "nombre": "(AFI) Fecha retiro",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776723500",
+  "nombre": "(AFI) Fecha último aporte",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776723595",
+  "nombre": "(AFI) Carta intención de afiliación",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776723665",
+  "nombre": "(AFI) Solicitud paz y salvo",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776952477278",
+  "nombre": "COTIZACIÓN",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1776978323",
+  "nombre": "(CON) Estado actualización",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1777256187",
+  "nombre": "(CON) Aceptación solicitud orden de compra",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1777256388",
+  "nombre": "(CON) Observaciones solicitud orden compra",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1777333349801",
+  "nombre": "Correo Cliente #1",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1777333387888",
+  "nombre": "Correo Cliente #2",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1777333406801",
+  "nombre": "Nombre Cliente #3",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1777333420653",
+  "nombre": "Telefono Cliente #3",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1777333432868",
+  "nombre": "Correo Cliente #3",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1777335239497",
+  "nombre": "Zona a depilar Pequeña- MujerN- Cliente #1",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1777335270776",
+  "nombre": "Zona a depilar Pequeña- MujerN- Cliente #3",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1777384737058",
+  "nombre": "Correo cliente -add",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1777411064",
+  "nombre": "(AFI) Portafolio",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1777928228",
+  "nombre": "(CON) Fecha aprobación CAP",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1778101729",
+  "nombre": "(CON) Observaciones a tener en cuenta",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1778173198",
+  "nombre": "(CON) Decisión aprobación presupuestal",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1778286177",
+  "nombre": "(CON) Pendiente subsanado",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1778556242",
+  "nombre": "FECHA Y HORA EN LA QUE HICIERON EL CAMBIO DEL MOTIVO",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1778598805",
+  "nombre": "(CON) Pendiente modificación subsanada",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1778772362",
+  "nombre": "(CON) Persona autorizada Financiera",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1778772913676",
+  "nombre": "Ultima persona que modifico el monto",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1778775193",
+  "nombre": "(CON) Monto autorizado backup",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1778775463983",
+  "nombre": "FECHA Y HORA DE LA ULTIMA MODIFICACIÓN",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1778791850",
+  "nombre": "(CON) Póliza",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1779206183",
+  "nombre": "(SDC) Observaciones de rechazo / subsanación",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1779210730",
+  "nombre": "(CON) Monto adición",
+  "tipo": "double",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1779210889",
+  "nombre": "(CON) Tiempo adición",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1779211106",
+  "nombre": "(CON) Documento liquidación firmada",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1779293904",
+  "nombre": "(CON) Centro de costos de la adición",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1779307064",
+  "nombre": "(CON) Monto por Centro de Costo adicional",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1779380485600",
+  "nombre": "Días de vigencia",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1779729160",
+  "nombre": "(CON) Observaciones presupuesto",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1779739540",
+  "nombre": "Q(INS) Estado documentación",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1779807721",
+  "nombre": "(CON) Monto final",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1779912907",
+  "nombre": "(CON) Monto propuesto",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1780329978",
+  "nombre": "(SDC) Observaciones pago",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1780525112",
+  "nombre": "CORREO ENVIADO",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1780591618",
+  "nombre": "COR FLUJO (CON)",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1780605135312",
+  "nombre": "Fecha de actividad (AF)",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1780605779180",
+  "nombre": "Ultima fecha de actividad (AF)",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1780612399",
+  "nombre": "(AFI) Registro de la visita",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1780612937",
+  "nombre": "(AFI) Estado de la cita",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1780613506",
+  "nombre": "(AFI) Estado de la gestión",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1780613845",
+  "nombre": "(AFI) Avances de la gestión",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1781709627",
+  "nombre": "prueba juli",
+  "tipo": "crm",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1781711069",
+  "nombre": "(AFI) Contacto para visita",
+  "tipo": "crm",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1781711735",
+  "nombre": "(AFI) Notas de seguimiento",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1782174017",
+  "nombre": "CON) Aceptación terminación OC",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782395630961",
+  "nombre": "(MER) Destino",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782395768",
+  "nombre": "(MER) Género",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782396013",
+  "nombre": "(MER) Mascotas",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782396591337",
+  "nombre": "(MER) Adicionales",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782396758",
+  "nombre": "(MER) No. Noches",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782399746",
+  "nombre": "(MER) Fecha Solicitud",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782400162005",
+  "nombre": "(MER) Veces Contactado",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782400181",
+  "nombre": "(MER) Gestión Realizada",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1782400235",
+  "nombre": "(MER) Confirmación De Destino",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782400278",
+  "nombre": "(MER) Confirmación Precio",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782400457572",
+  "nombre": "(MER) Fecha de retoma",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782400509",
+  "nombre": "(MER) Observaciones de perdida",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782400701",
+  "nombre": "(MER) Motivo de descarte",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782401227619",
+  "nombre": "Proyecto De Vivienda (V)",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1782401585",
+  "nombre": "(MER) Nacionalidad",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782403318",
+  "nombre": "(MER) Ocupación",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782403611870",
+  "nombre": "(MER) Primas",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782403647209",
+  "nombre": "(MER) Valor Prima",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782403716546",
+  "nombre": "(MER) Ahorros",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782403762527",
+  "nombre": "(MER) Cesantías",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782404020027",
+  "nombre": "(MER) Precio",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782404060216",
+  "nombre": "(MER) Bono",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782404070218",
+  "nombre": "(MER) Recursos Propios",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782404180285",
+  "nombre": "(MER) Credito",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782404358",
+  "nombre": "(MER) Banco Crédito",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782406385548",
+  "nombre": "(CON) CORREO JEFE",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782481760308",
+  "nombre": "(MER) Resultado Estudio",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782482082381",
+  "nombre": "(MER) Se Envió Cotización",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782482275400",
+  "nombre": "(MER) Validación Fiduciaria",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782483970837",
+  "nombre": "(MER) Ultima Llamada",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782484120341",
+  "nombre": "(MER) Tiempo Estimado De Compra",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782484176690",
+  "nombre": "(MER) Terminación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782485144",
+  "nombre": "(MER) Resultado Seguimiento",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782485673",
+  "nombre": "(MER) Otros",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782485932",
+  "nombre": "(MER) Participantes Al Evento",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782485986",
+  "nombre": "(MER) Rider",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782486099",
+  "nombre": "(MER) Valor Rider",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782486149",
+  "nombre": "(MER) Catering",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782824578",
+  "nombre": "(MER) Valor Catering",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782824640",
+  "nombre": "(MER) Valor Locación",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782824697",
+  "nombre": "(MER) Total Iva",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782824740",
+  "nombre": "(MER) Valor Total",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782824974",
+  "nombre": "(MER) Hora Inicio",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782825015",
+  "nombre": "(MER) Hora Fin",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782825189",
+  "nombre": "(MER) Confirmación De Asistentes",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782826621",
+  "nombre": "(MER) Confirmación Locación",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1782827791",
+  "nombre": "(MER) Programa Vinculación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1783006452375",
+  "nombre": "(MER) Fecha/Hora de la orden",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1784735066",
+  "nombre": "(MER) Medio De Pago",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1784736049",
+  "nombre": "(MER) Observaciones De La Oferta",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1784825559",
+  "nombre": "(MER) Observaciones Del Seguimiento",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1784825973",
+  "nombre": "(MER) Observaciones Seguimiento",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1785441570",
+  "nombre": "(CON) Documento aceptación",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1785516591",
+  "nombre": "(MER) Acomodación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1785530817",
+  "nombre": "(MER) Servicio al cliente",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1785530917",
+  "nombre": "(MER) Alimentación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1785531195",
+  "nombre": "(MER) Zonas comunes",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1785531249",
+  "nombre": "(MER) Habitaciones",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1786562787",
+  "nombre": "(CON) Documento último Informe avance",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1787589210",
+  "nombre": "(MER) No. de recibo de pago",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1787589422",
+  "nombre": "(MER) Notas crédito",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1787590126",
+  "nombre": "(MER) (CON) Terminación gestión",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1787601187",
+  "nombre": "(MER) Terminación calificación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1787601437",
+  "nombre": "(HEX) TIPO DE SOLICITUD",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1787602366",
+  "nombre": "(HEX) LOS PUENTES",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1787602704",
+  "nombre": "(HEX) MIRADOR",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1787603113",
+  "nombre": "(HEX) REFUGIO",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1787603252",
+  "nombre": "(HEX) NÚMERO DE HORAS POR DÍA",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1787603507",
+  "nombre": "(HEX) INICIO EXTRA",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1787603895",
+  "nombre": "(HEX) TIPO DE HORA EXTRA",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1787605110",
+  "nombre": "(HEX) MOTIVO DE SOLICITUD EXTRAORDINARIA",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1787668755",
+  "nombre": "(CON) Lugar de prestación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788194382",
+  "nombre": "(MER) Campaña",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788204748",
+  "nombre": "(HEX) Aceptación Recursos Humanos",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788204963",
+  "nombre": "(HEX) Minutos efectivamente prestados",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788375958",
+  "nombre": "(MER) Tiquetes Aéreos",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788378423",
+  "nombre": "(MER) Servicios en Destino",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1788385474",
+  "nombre": "(MER) Necesidad",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788815348",
+  "nombre": "(MER) Bien ¿Nos recomendaría con un amigo?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788815631",
+  "nombre": "(MER) Bien ¿Fue clara la asesoría?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788816822",
+  "nombre": "(MER) Bien ¿Qué tal los canales de atención?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788817009",
+  "nombre": "(MER) Bien ¿Cómo evalúa la organización?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788817095",
+  "nombre": "(MER) Bien ¿Cómo evalúa el programa?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788883466",
+  "nombre": "(HEX) horas efectivamente prestadas",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788887685",
+  "nombre": "(HEX) Desistido",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788922308",
+  "nombre": "(COS) Código de Centro de Costos",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788922923",
+  "nombre": "(COS) Nombre de Centro de Costos",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788922978",
+  "nombre": "(COS) Código del Auxiliar Contable",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788923107",
+  "nombre": "(COS) Nombre del Auxiliar Contable",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1788923199",
+  "nombre": "(COS) Mes",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1789415840",
+  "nombre": "(HEX) Horas diurnas",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1789415938",
+  "nombre": "(HEX) Horas nocturnas",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1789418601",
+  "nombre": "(Hex) Total horas",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1789574526",
+  "nombre": "Q(INS) Consulta Onu Representante",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1789574616",
+  "nombre": "Q(INS) Consulta Onu Razón social",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1789741678",
+  "nombre": "(MER) ¿Qué tipo de experiencia buscas?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1789746670",
+  "nombre": "(MER) ¿Sueñas con tener tu propia vivienda?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790176973",
+  "nombre": "(MER) Otro destino",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790282151",
+  "nombre": "(MER) Total personas",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790606650",
+  "nombre": "(CON) Documento acta de liquidación",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790609180",
+  "nombre": "(CON) Documento aceptación gestores",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1790777051897",
+  "nombre": "(COS) % para Recalcular",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790780949",
+  "nombre": "(COS) Descripción de la Necesidad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790794635",
+  "nombre": "(MER) Eve ¿Nos recomendaría con un amigo?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790805614",
+  "nombre": "(MER) Eve ¿Fue clara la cotización?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790808636",
+  "nombre": "(MER) Eve ¿Qué tal el espacio y equipos?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790808722",
+  "nombre": "(MER) Eve ¿Cómo evalúa al personal de apoyo?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790808839",
+  "nombre": "(MER) Eve ¿Se cumplió todo lo pactado?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790809631",
+  "nombre": "(MER) Viv ¿Nos recomendaría con un amigo?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790810186",
+  "nombre": "(MER) Viv ¿Fue clara la información?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790810409",
+  "nombre": "(MER) Viv ¿Cómo evalúa a su asesor?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790811266",
+  "nombre": "(MER) Viv ¿Le respondieron a tiempo?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790812041",
+  "nombre": "(MER) Tur ¿Nos recomendarías a un amigo?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790812182",
+  "nombre": "(MER) Tur ¿Qué tan ágil fue la cotización?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790812303",
+  "nombre": "(MER) Tur ¿Fue clara la info del plan?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790812400",
+  "nombre": "(MER) Tur ¿El asesor dominaba el tema?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790812525",
+  "nombre": "(MER) Tur ¿Te ayudó la asesoría a decidir?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790812764",
+  "nombre": "Nuevo Campo",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790812858",
+  "nombre": "(MER) Hot ¿Qué tan ágil fue la cotización?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790812949",
+  "nombre": "(MER) Hot ¿Fue clara la info de tarifas?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790813151",
+  "nombre": "(MER) Hot ¿Nos recomendarías a un amigo?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1790813284",
+  "nombre": "(MER) Hot ¿El asesor dominaba el tema?",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1791136101",
+  "nombre": "(CON) Procedencia recurso bkup",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1791211191",
+  "nombre": "1(COS) Monto solicitado",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1791211377",
+  "nombre": "1(COS) Monto diferencia",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1791302854",
+  "nombre": "(CON) Proveedores registro",
+  "tipo": "crm",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1791389592",
+  "nombre": ".(CON) Cotización elegida",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1791390678",
+  "nombre": "(CON) Observaciones retención presupuestal",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1791391607",
+  "nombre": "(CON) Observaciones terminación",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1791391746",
+  "nombre": "(CON) Terminación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1791406447",
+  "nombre": "(CON) Documento aprobación jefe de área",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1791488679",
+  "nombre": ".(CON) Documento aprobación",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1791488785",
+  "nombre": "(CON) Documento aprobación",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1791988427",
+  "nombre": "(CON) Números de orden de compra",
+  "tipo": "string",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_1791991882",
+  "nombre": "(CON) Retención subsanada",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1792446026",
+  "nombre": "(AFI) Código CIIU",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1792509693",
+  "nombre": "(AFI) Matricula",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1792511026",
+  "nombre": "(AFI) Actividad económica",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1792680421",
+  "nombre": "(CON) Persona autorizada Jurídica",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1792680664",
+  "nombre": "(CON) Número de contrato bkup",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1792683488",
+  "nombre": "(CON) Ultima persona que modifico",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1792700679",
+  "nombre": "(CON) No. de documento de análisis bkup",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_1792701768",
+  "nombre": "(CON) Persona autorizada Apoyo Logístico",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_5FBC4737D7DD8",
+  "nombre": "Perfil del cliente",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_5FBC47380FF10",
+  "nombre": "Formulario de solicitud o vinculación",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_5FBC47383F12D",
+  "nombre": "RFQ o solicitud especifica",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_5FF8C59209348",
+  "nombre": "Área a la que Corresponde",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60058D16D5BC7",
+  "nombre": "Tipo afiliado",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_600C4DB32909A",
+  "nombre": "Boleta de pago",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6012CE5BF3760",
+  "nombre": "Cámara de Comercio",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_602A8EC96F74A",
+  "nombre": "PIPELINE  AFILIACIONES",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60AF9F85EBBE2",
+  "nombre": "Estado Civil",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60AF9F86313C2",
+  "nombre": "Documento de identidad DEF",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60AF9F865DA3B",
+  "nombre": "Dirección DEF",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60AF9F868D33A",
+  "nombre": "Ciudad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60AF9F86C1B53",
+  "nombre": "Tipo Vivienda",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60AF9F86EDC6D",
+  "nombre": "# Hijos afiliados",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60AF9F872E7C6",
+  "nombre": "# Hermanos afiliados",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60B110D827019",
+  "nombre": "Primer apellido",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60B110D903C73",
+  "nombre": "Segundo Apellido",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60B8CE41D3D72",
+  "nombre": "Teléfono - Celular 2025",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60B8CE420D261",
+  "nombre": "Personas a cargo",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60B8CE4236649",
+  "nombre": "Teléfono del arrendador",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60B8CE42598E0",
+  "nombre": "Nombre de la empresa",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60B8CE4289B39",
+  "nombre": "nit",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60B8CE42BC1A6",
+  "nombre": "Teléfono Empresa.",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60B8CE4306BB7",
+  "nombre": "Extensión",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60B8CE433F4B7",
+  "nombre": "Teléfono / Celular",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60F981FFD6140",
+  "nombre": "Línea  de servicio",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60F982002CA36",
+  "nombre": "NIT o Cédula",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60F982006F836",
+  "nombre": "Tipo de Crédito",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60F982018F5E5",
+  "nombre": "Nivel académico (BE)",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_60F992BA2E01F",
+  "nombre": "Fotocopia de Cédula",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_60F992BA6C003",
+  "nombre": "NIT o Cédula",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_644957A78E687",
+  "nombre": "Instagram_WZ",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_644957A85FEFA",
+  "nombre": "VK_WZ",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_644957A9141B5",
+  "nombre": "TelegramUsername_WZ",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_644957A9C2B30",
+  "nombre": "TelegramId_WZ",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_644957AA620FF",
+  "nombre": "Avito_WZ",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_66D0875E347BF",
+  "nombre": "Proyecto",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_66D62A1EB7409",
+  "nombre": "Edad",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_66D62A1EDD402",
+  "nombre": "(AFI) Asesor",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_66D62A1F02EBD",
+  "nombre": "Cantidad de Cuotas",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_66D62A1F39BAC",
+  "nombre": "Línea de crédito",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_66D62A1F54376",
+  "nombre": "¿Vivienda arrendada?",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_66D62A1F6E4F0",
+  "nombre": "Canon / Valor Arriendo",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_66D62A1F8639C",
+  "nombre": "Nombre Arrendador",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_66D62A1F9FF3E",
+  "nombre": "Teléfono Arrendador",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_66D62A1FB78DE",
+  "nombre": "Total Gastos",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_66E0992935336",
+  "nombre": "Nombre y apellidos",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6723B738280C2",
+  "nombre": "Dirección de Domicilio",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6723B73D6DD87",
+  "nombre": "(MER) Lista campaña",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6723B74BACBD3",
+  "nombre": "Categoría",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6723B7506D301",
+  "nombre": "Fecha Inicial del servicio",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6723B7550049C",
+  "nombre": "Fecha final del servicio",
+  "tipo": "datetime",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6723B759E8C80",
+  "nombre": "Nivel académico (BE)",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6734D030D48AC",
+  "nombre": "Número de reserva",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6734D0359C7CB",
+  "nombre": "Número de comprobante",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6794056DCE776",
+  "nombre": "Requiero asesoría en:",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_67BE2274C6ECF",
+  "nombre": "Fecha de Ingreso",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_67C7210315D39",
+  "nombre": "Nuevo número",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_67C72109297A4",
+  "nombre": "Número de identificación",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_67C7210F40374",
+  "nombre": "Numero de identificación",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_67D1F51F94CBB",
+  "nombre": "Prueba Archivo",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_67F81FDFCA81B",
+  "nombre": "Ahorros cuota inicial",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_67F81FE78B8D1",
+  "nombre": "Pago de cuotas mensuales",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_67F83E9782DD2",
+  "nombre": "Medio por el cual desea ser contactado",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_682E32AA89526",
+  "nombre": "Dirección",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6E2236782",
+  "nombre": "Nivel Acádemico",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6E2BDD39B",
+  "nombre": "Enlaces con términos y condiciones",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_686E6E34C97D5",
+  "nombre": "Condiciones comerciales",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6E3E12B32",
+  "nombre": "Telefono 1",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6E47EC52E",
+  "nombre": "Telefono 2",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6E5151761",
+  "nombre": "Telefono 3",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6E5A82964",
+  "nombre": "Telefono 4",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6E640D738",
+  "nombre": "Fecha de Cita",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6E6E1225D",
+  "nombre": "PROY. VIVIENDA",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6E8294607",
+  "nombre": "(CRE)Motivo Negación",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6EBBDB683",
+  "nombre": "# de Vacantes",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6EC5105C7",
+  "nombre": "Formación Académica",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6ECDE7F7B",
+  "nombre": "Tiempo y Tipo de Experiencia",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6ED728D0A",
+  "nombre": "Funciones y/o Capacidades",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6EE0D9879",
+  "nombre": "Horario de Labor",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6EEA1452A",
+  "nombre": "Salario o ingreso",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6EF33970A",
+  "nombre": "Lugar de Trabajo",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6EFC9E771",
+  "nombre": "Posee Cursos?",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6F062D743",
+  "nombre": "Control Crédito",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6F0FE1F63",
+  "nombre": "Auxiliar de créditos",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6F197D724",
+  "nombre": "Analista de crédito",
+  "tipo": "employee",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6F2352D2A",
+  "nombre": "Boleta de Pago",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_686E6F2D9CA66",
+  "nombre": "Servicios Zona Recreativa",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6F377B71A",
+  "nombre": "Diseño de actividad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6F41CBCDC",
+  "nombre": "Fecha estimada",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_686E6F4C22636",
+  "nombre": "DICCIONARIO  DATOS - AFILIACIONES",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_687FCED3CAEEA",
+  "nombre": "Nivel académico",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_689A6E7526798",
+  "nombre": "(INS) Tipo de proveedor",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6E7F5D46E",
+  "nombre": "(INS) (HEX) Nombre completo",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6E89A866B",
+  "nombre": "(INS) Razón social",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6E940BFD6",
+  "nombre": "(MER) (INS) Tipo de documento",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6E9E48470",
+  "nombre": "(MER) (INS) Número de documento",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6EA8628FD",
+  "nombre": "(AFI) Dirección Principal",
+  "tipo": "address",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6EBCED65C",
+  "nombre": "(AFI) Teléfono Principal",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6ED1B3380",
+  "nombre": "(INS) Número celular de contacto comercial",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6EDBEB214",
+  "nombre": "(INS) Número celular de contacto comercial",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6EFABD3A4",
+  "nombre": "Nombre de Representante Legal",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6F04D0E4E",
+  "nombre": "Nombre de Representante Legal",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6F0F28F61",
+  "nombre": "(AFI) Nombre de representante legal",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6F23A4B57",
+  "nombre": "(AFI) Tipo de documento del representante legal",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6F4C681C1",
+  "nombre": "(INS) Producto o servicio que ofrece",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6F56AC356",
+  "nombre": "(INS) Producto o servicio que ofrece",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6F60D4741",
+  "nombre": "(AFI) Celular representante legal",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A6F753FA66",
+  "nombre": "(INS) E-mail representante legal",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A703D7E1DE",
+  "nombre": "(EVE) Nombre del Evento",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A70489EA3D",
+  "nombre": "(EVE) Fecha y hora del Evento",
+  "tipo": "date",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A7053B7A81",
+  "nombre": "(EVE) Lugar del Evento",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A705FE4664",
+  "nombre": "(EVE) Nombre del Coordinador del Evento",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_689A706BB8606",
+  "nombre": "(EVE) Foto de la Decoración",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_68B9A976495C5",
+  "nombre": "MaxUsername_WZ",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_68B9A981F1ACE",
+  "nombre": "MaxId_WZ",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_68EFCD5052C88",
+  "nombre": "WF",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_68EFCD592C5FF",
+  "nombre": "WF",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6900D2C94BD02",
+  "nombre": "Copia cedula autorizado 2",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6900D2E7EE2AF",
+  "nombre": "camara de comercio",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6900D2E82F60F",
+  "nombre": "camara de comercio",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6900E2F8081D1",
+  "nombre": "Formato diligenciado",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6900E30470798",
+  "nombre": "RUT",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6900E73A35E6E",
+  "nombre": "Copia cedula",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6900E746DD813",
+  "nombre": "Anexo 1",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6900E75343807",
+  "nombre": "Copia cedula representante",
+  "tipo": "file",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_690E5F01A0CF4",
+  "nombre": "Origen (PROS)",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_69D3DE02E018B",
+  "nombre": "¿Eres afiliado?",
+  "tipo": "boolean",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_69D3DE17E93AE",
+  "nombre": "WhatsappUsername_WZ",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_69D3DE2CA04BA",
+  "nombre": "WhatsappLid_WZ",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6A3DAB3D962CE",
+  "nombre": "Documentos soporte  (SDC)",
+  "tipo": "file",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_6A3DAB5989298",
+  "nombre": "Valor total para desembolsar  (SDC)",
+  "tipo": "money",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6A3DAB7464309",
+  "nombre": "CianProfileId_WZ",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6A3DAB8E58AD5",
+  "nombre": "INTERÉS",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_6A60FE660B625",
+  "nombre": "(MER) Antigüedad",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_DEAL_1724427066921",
+  "nombre": "Número de cuotas",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_DEAL_1725050844917",
+  "nombre": "Estratos Socioeconómicos",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_DEAL_1725050935253",
+  "nombre": "Tiempo en la residencia",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_DEAL_1725893480429",
+  "nombre": "Servicio de Interés",
+  "tipo": "enumeration",
+  "multiple": true
+ },
+ {
+  "codigo": "UF_CRM_DEAL_1725910164191",
+  "nombre": "Servicio de interés agencia de viajes",
+  "tipo": "enumeration",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_DEAL_1732548360800",
+  "nombre": "Medio por el cuál desea ser contactado",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_DEAL_1732548415639",
+  "nombre": "¿Cuál es tu presupuesto máximo para la cuota mensual?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_DEAL_1732548446047",
+  "nombre": "¿Estás reportado en centrales de riesgo?",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_DEAL_1732548495390",
+  "nombre": "Full name",
+  "tipo": "string",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_DEAL_1741099145060",
+  "nombre": "Monto del crédito hipotecario que necesita",
+  "tipo": "double",
+  "multiple": false
+ },
+ {
+  "codigo": "UF_CRM_DEAL_1761660405281",
+  "nombre": "Adjuntar archivo",
+  "tipo": "file",
+  "multiple": false
+ }
+]

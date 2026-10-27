@@ -1,11 +1,17 @@
+import "dotenv/config";
+
 import Fastify from "fastify";
 import cors from "@fastify/cors";
 
 import companiesRoutes from "../routes/companies.js";
+import asesoresRoutes from "../routes/asesores.js";
 
 
 const app = Fastify({
-    logger:true
+    logger:true,
+
+    // CSV grandes llegan como JSON
+    bodyLimit:20 * 1024 * 1024
 });
 
 
@@ -22,6 +28,14 @@ app.register(
     companiesRoutes,
     {
         prefix:"/api/companies"
+    }
+);
+
+
+app.register(
+    asesoresRoutes,
+    {
+        prefix:"/api/asesores"
     }
 );
 
