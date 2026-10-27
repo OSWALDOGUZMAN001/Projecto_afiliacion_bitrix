@@ -853,7 +853,8 @@ columnas={[
     ["nit","NIT"],
     ["razonSocial","Razón social"],
     ["asesor","Asesor"],
-    ["bitrixId","ID negociación"]
+    ["bitrixId","ID negociación"],
+    ["enlace","Ver en Bitrix"]
 ]}
 
 />
@@ -938,7 +939,15 @@ filas.map((fila,index)=>(
 <tr key={index}>
 {
 columnas.map(([clave])=>(
-<td key={clave}>{fila[clave]}</td>
+<td key={clave}>
+{
+clave === "enlace" && fila[clave]
+?
+<a href={fila[clave]} target="_blank" rel="noreferrer">Abrir</a>
+:
+fila[clave]
+}
+</td>
 ))
 }
 </tr>

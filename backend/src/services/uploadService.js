@@ -2,7 +2,8 @@ import prisma from "../utils/prisma.js";
 
 import {
     crearNegociacionBitrix,
-    obtenerOpcionesListas
+    obtenerOpcionesListas,
+    urlNegociacion
 } from "./bitrixService.js";
 
 import {
@@ -364,7 +365,8 @@ export async function procesarEmpresas(
             creados.push({
                 ...registro,
                 asesor:asesor.nombre,
-                bitrixId:String(bitrixId)
+                bitrixId:String(bitrixId),
+                enlace:urlNegociacion(bitrixId)
             });
 
 

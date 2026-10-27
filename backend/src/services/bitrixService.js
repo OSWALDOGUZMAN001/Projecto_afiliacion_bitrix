@@ -29,6 +29,23 @@ function urlBitrix(metodo){
 
 
 
+// Enlace para abrir la negociacion en Bitrix
+// https://portal.bitrix24.es/crm/deal/details/123/
+
+export function urlNegociacion(id){
+
+    try{
+        return new URL(urlBitrix("")).origin + `/crm/deal/details/${id}/`;
+    }
+    catch{
+        return "";
+    }
+
+}
+
+
+
+
 // Opciones de los campos tipo lista: { codigo: [{ ID, VALUE }] }
 
 export async function obtenerOpcionesListas(codigos){
