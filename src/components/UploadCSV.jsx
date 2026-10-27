@@ -166,23 +166,38 @@ export default function UploadCSV() {
             filas = hoja ? hoja.data : [];
 
         }
-        else{
+        else if(/\.csv$/i.test(file.name)){
+
+
+            // Excel en español guarda los CSV en ANSI (Windows-1252):
+            // si no es UTF-8 valido se lee como ANSI para no perder las tildes
+            const bytes = await file.arrayBuffer();
+
+            let texto;
+
+            try{
+                texto = new TextDecoder("utf-8", { fatal:true }).decode(bytes);
+            }
+            catch{
+                texto = new TextDecoder("windows-1252").decode(bytes);
+            }
 
 
             // Papaparse detecta ";" o "," y respeta comillas
-            filas = await new Promise(resolve=>{
+            filas = Papa.parse(texto,{
+                skipEmptyLines:"greedy"
+            }).data;
 
-                Papa.parse(file,{
+        }
+        else{
 
-                    skipEmptyLines:"greedy",
+            alert(
+                "Formato no soportado. Guarde el archivo como Excel (.xlsx) o CSV"
+            );
 
-                    encoding:"UTF-8",
+            setEmpresas([]);
 
-                    complete:(results)=>resolve(results.data)
-
-                });
-
-            });
+            return;
 
         }
 
