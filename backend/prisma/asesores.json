@@ -10,5 +10,6 @@
   { "id": 9,  "nombre": "Alexander Prieto",  "bitrixResponsableId": null },
   { "id": 10, "nombre": "Santiago Valencia", "bitrixResponsableId": null },
   { "id": 11, "nombre": "Javier Garcia",     "bitrixResponsableId": null },
-  { "id": 12, "nombre": "Ivan Gutierrez",    "bitrixResponsableId": null }
+  { "id": 12, "nombre": "Ivan Gutierrez",    "bitrixResponsableId": null },
+  { "id": 13, "nombre": "Daniel Angel",      "bitrixResponsableId": null }
 ]

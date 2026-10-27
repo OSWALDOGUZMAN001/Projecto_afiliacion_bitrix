@@ -38,9 +38,11 @@ function armarNegociacion(datos, camposBitrix, asesor){
 
         STAGE_ID,
 
-        // Responsable de la negociacion
-        ASSIGNED_BY_ID:
-        asesor.bitrixResponsableId,
+        // Responsable: solo si el asesor tiene ID de Bitrix cargado;
+        // si no, Bitrix deja como responsable al dueño del webhook
+        ...(asesor.bitrixResponsableId
+            ? { ASSIGNED_BY_ID:asesor.bitrixResponsableId }
+            : {}),
 
         ...camposBitrix,
 
@@ -272,17 +274,6 @@ export async function procesarEmpresas(
 
             }
 
-
-            if(!asesor.bitrixResponsableId){
-
-                errores.push({
-                    ...registro,
-                    motivo:`El asesor ${asesor.nombre} no tiene ID de responsable en Bitrix`
-                });
-
-                continue;
-
-            }
 
 
 
