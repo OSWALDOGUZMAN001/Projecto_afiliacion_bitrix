@@ -64,17 +64,51 @@ function numeroEntero(valor){
 
 
 
-// El asesor puede venir como ID ("3") o como nombre ("Daniel Angel")
+// El asesor puede venir como ID ("3") o como nombre.
+// En la tabla se guarda primer nombre y primer apellido ("Paola Garcia"),
+// en el archivo puede venir completo ("Paola Marcela Garcia Lopez"):
+// coincide si el primer nombre es igual y el apellido está entre las demás palabras.
+// Devuelve { asesor } o { error }.
 
 function buscarAsesor(valor, asesores){
 
     const texto = limpiar(valor);
 
     if(/^\d+$/.test(texto)){
-        return asesores.find(a=>a.id === Number(texto));
+        return { asesor:asesores.find(a=>a.id === Number(texto)) };
     }
 
-    return asesores.find(a=>normalizar(a.nombre) === normalizar(texto));
+
+    const exacto = asesores.find(a=>normalizar(a.nombre) === normalizar(texto));
+
+    if(exacto){
+        return { asesor:exacto };
+    }
+
+
+    const [primerNombre, ...resto] = normalizar(texto).split(" ");
+
+    const candidatos = asesores.filter(a=>{
+
+        const [nombre, ...apellidos] = normalizar(a.nombre).split(" ");
+
+        return nombre === primerNombre &&
+            apellidos.length > 0 &&
+            apellidos.every(apellido=>resto.includes(apellido));
+
+    });
+
+
+    if(candidatos.length > 1){
+
+        return {
+            error:`El asesor "${texto}" coincide con varios: ${candidatos.map(a=>a.nombre).join(", ")}`
+        };
+
+    }
+
+
+    return { asesor:candidatos[0] };
 
 }
 
@@ -221,16 +255,28 @@ export async function procesarEmpresas(
 
             const valorAsesor = datos.asesor ?? limpiar(asesorPorDefecto);
 
-            const asesor = buscarAsesor(valorAsesor, asesores);
+            const { asesor, error:errorAsesor } = buscarAsesor(valorAsesor, asesores);
 
 
             if(!asesor){
 
                 errores.push({
                     ...registro,
-                    motivo: valorAsesor
+                    motivo: errorAsesor || (valorAsesor
                         ? `El asesor "${valorAsesor}" no está registrado`
-                        : "Registro sin asesor asignado"
+                        : "Registro sin asesor asignado")
+                });
+
+                continue;
+
+            }
+
+
+            if(!asesor.bitrixResponsableId){
+
+                errores.push({
+                    ...registro,
+                    motivo:`El asesor ${asesor.nombre} no tiene ID de responsable en Bitrix`
                 });
 
                 continue;

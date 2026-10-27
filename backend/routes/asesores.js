@@ -20,7 +20,8 @@ export default async function asesoresRoutes(app){
     /*
     Crear o actualizar asesores.
     Acepta un objeto o una lista:
-    { "id": 1, "nombre": "Ana Pérez", "bitrixResponsableId": 216459 }
+    { "id": 1, "nombre": "Paola Garcia", "bitrixResponsableId": 216459 }
+    bitrixResponsableId es opcional (se puede asignar despues).
     */
 
     app.post("/", async(request, reply)=>{
@@ -41,18 +42,21 @@ export default async function asesoresRoutes(app){
 
             const nombre = String(item?.nombre ?? "").trim();
 
-            const bitrixResponsableId = Number(item?.bitrixResponsableId);
+            const bitrixResponsableId =
+                item?.bitrixResponsableId == null
+                    ? undefined
+                    : Number(item.bitrixResponsableId);
 
 
             if(
                 !Number.isInteger(id) ||
                 !nombre ||
-                !Number.isInteger(bitrixResponsableId)
+                (bitrixResponsableId !== undefined && !Number.isInteger(bitrixResponsableId))
             ){
 
                 return reply.code(400).send({
                     success:false,
-                    error:"Cada asesor necesita id, nombre y bitrixResponsableId (números enteros)",
+                    error:"Cada asesor necesita id y nombre; bitrixResponsableId debe ser número entero",
                     item
                 });
 

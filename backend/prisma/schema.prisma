@@ -92,7 +92,8 @@ model Asesor {
   nombre String
 
   // ID del usuario responsable en Bitrix24 (ASSIGNED_BY_ID)
-  bitrixResponsableId Int
+  // null = todavia no se ha asignado
+  bitrixResponsableId Int?
 
   activo Boolean @default(true)
 
