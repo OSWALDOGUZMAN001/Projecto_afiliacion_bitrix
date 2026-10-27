@@ -1,11 +1,12 @@
 /*
-MAPEO COLUMNAS CSV -> CAMPOS NEGOCIACION BITRIX
+MAPEO COLUMNAS EXCEL/CSV -> CAMPOS NEGOCIACION BITRIX
+Fuente: listado "CAMPOS CAMARA DE COMERCIO" (columna EXCEL -> BITRIX)
 
 clave:   nombre interno usado en el backend
-alias:   nombres de columna aceptados en el CSV
+alias:   nombres de columna aceptados
          (se comparan sin tildes, mayusculas ni signos)
-bitrix:  codigo del campo en Negociaciones
-         (tomado de camposNegociacion.json, null = no se envia como campo)
+bitrix:  codigo del campo en Negociaciones (camposNegociacion.json)
+         null = no se envia como campo personalizado
 */
 
 
@@ -13,215 +14,153 @@ export const MAPEO_CAMPOS = [
 
     {
         clave:"nit",
-        alias:[
-            "nit",
-            "nit empresa",
-            "afi nit empresa",
-            "nit o cedula",
-            "numero de identificacion",
-            "numero identificacion",
-            "identificacion",
-            "documento",
-            "numero documento"
-        ],
+        alias:[ "identificacion", "nit" ],
         // (AFI) Nit Empresa
         bitrix:"UF_CRM_1743689404"
     },
 
     {
         clave:"razonSocial",
-        alias:[
-            "razon social",
-            "razonsocial",
-            "nombre empresa",
-            "nombre de la empresa",
-            "empresa"
-        ],
-        // Va en el titulo de la negociacion
+        alias:[ "razon social" ],
+        // Nombre de la negociacion (TITLE)
         bitrix:null
     },
 
     {
         clave:"direccion",
-        alias:[
-            "direccion",
-            "direccion empresa",
-            "direccion de la empresa"
-        ],
-        // Dirección de la empresa
-        bitrix:"UF_CRM_1627051144"
+        alias:[ "direccion" ],
+        // (AFI) Dirección Principal
+        bitrix:"UF_CRM_689A6EA8628FD"
     },
 
     {
-        clave:"barrio",
-        alias:[
-            "barrio",
-            "barrio o vereda",
-            "afi barrio o vereda"
-        ],
-        // (AFI)Barrio o vereda
-        bitrix:"UF_CRM_1626966414"
+        clave:"ciudad",
+        alias:[ "ciudad o municipio", "ciudad", "municipio" ],
+        // (AFI) Municipios Cundinamarca (lista)
+        bitrix:"UF_CRM_1765813289"
     },
 
     {
-        clave:"localidad",
-        alias:[
-            "localidad"
-        ],
-        // Localidad (texto). (AFI) Localidades Bogotá es lista y requiere IDs.
-        bitrix:"UF_CRM_1626966710"
+        clave:"celular",
+        alias:[ "celular" ],
+        // (AFI) Celular representante legal
+        bitrix:"UF_CRM_689A6F60D4741"
     },
 
     {
-        clave:"celular1",
-        alias:[
-            "celular1",
-            "celular 1",
-            "celular",
-            "celular empresa no1",
-            "celular empresa 1"
-        ],
-        // Celular Empresa No.1
-        bitrix:"UF_CRM_1743690121"
+        clave:"telefono1",
+        alias:[ "telefono1", "telefono 1" ],
+        // (AFI) Teléfono Principal
+        bitrix:"UF_CRM_689A6EBCED65C"
     },
 
     {
-        clave:"celular2",
-        alias:[
-            "celular2",
-            "celular 2",
-            "celular empresa no2",
-            "celular empresa 2"
-        ],
-        // Celular Empresa No.2
-        bitrix:"UF_CRM_1743690139"
-    },
-
-    {
-        clave:"celular3",
-        alias:[
-            "celular3",
-            "celular 3",
-            "celular empresa no3",
-            "celular empresa 3"
-        ],
-        // Celular Empresa No.3
-        bitrix:"UF_CRM_1743690158"
-    },
-
-    {
-        clave:"telefono",
-        alias:[
-            "telefono",
-            "telefono afiliacion",
-            "telefono empresa"
-        ],
-        // Telefono - afiliacion
-        bitrix:"UF_CRM_1743690051"
+        clave:"telefono2",
+        alias:[ "telefono2", "telefono 2" ],
+        // (AFI) Teléfono de contacto
+        bitrix:"UF_CRM_1724949638"
     },
 
     {
         clave:"email",
-        alias:[
-            "email",
-            "correo",
-            "correo electronico",
-            "correo electronico empresa",
-            "e mail"
-        ],
-        // Correo Electronico Empresa
-        bitrix:"UF_CRM_1743690187"
+        alias:[ "correo electronico", "correo", "email" ],
+        // AF- Correo electrónico
+        bitrix:"UF_CRM_1724949520"
     },
 
     {
         clave:"codigoCiiu",
-        alias:[
-            "codigociiu",
-            "codigo ciiu",
-            "ciiu",
-            "afi codigo ciiu"
-        ],
+        alias:[ "ciiu", "codigo ciiu" ],
         // (AFI) Código CIIU
         bitrix:"UF_CRM_1792446026"
     },
 
     {
         clave:"actividadEconomica",
-        alias:[
-            "actividad economica",
-            "afi actividad economica"
-        ],
+        alias:[ "actividad economica" ],
         // (AFI) Actividad económica
         bitrix:"UF_CRM_1792511026"
     },
 
     {
-        clave:"baseDatos",
-        alias:[
-            "basedatos",
-            "base datos",
-            "base de datos",
-            "base de datos afiliacion"
-        ],
-        // Base de datos - Afiliacion
-        bitrix:"UF_CRM_1743690427"
-    },
-
-    {
-        clave:"representanteLegal",
-        alias:[
-            "representantelegal",
-            "representante legal",
-            "nombre representante legal",
-            "nombre representante legal afiliacion"
-        ],
-        // Nombre Representante legal Afiliacion
-        bitrix:"UF_CRM_1743689988"
-    },
-
-    {
         clave:"trabajadores",
-        alias:[
-            "trabajadores",
-            "numero trabajadores",
-            "numero de trabajadores",
-            "afi trabajadores"
-        ],
+        alias:[ "cantidad personal", "trabajadores" ],
         // (AFI) # Trabajadores
         bitrix:"UF_CRM_1743689782"
     },
 
     {
-        clave:"comentario",
-        alias:[
-            "comentario",
-            "comentarios",
-            "observaciones",
-            "comentario empresa afiliacion"
-        ],
-        // Comentario Empresa -Afiliacion
-        bitrix:"UF_CRM_1743690289"
+        clave:"tipoDocumentoRepLegal",
+        alias:[ "tipo identificacion rep legal" ],
+        // (AFI) Tipo de documento del representante legal (lista)
+        bitrix:"UF_CRM_689A6F23A4B57"
     },
 
     {
-        clave:"asesorId",
-        alias:[
-            "asesor",
-            "asesorid",
-            "id asesor",
-            "codigo asesor",
-            "numero asesor"
-        ],
-        // Se usa para buscar el asesor y su responsable en Bitrix
+        clave:"documentoRepLegal",
+        alias:[ "numero identificacion rep legal" ],
+        // AF- Cédula del representante legal
+        bitrix:"UF_CRM_1729290001"
+    },
+
+    {
+        clave:"representanteLegal",
+        alias:[ "representante legal" ],
+        // (AFI) Nombre de representante legal
+        bitrix:"UF_CRM_689A6F0F28F61"
+    },
+
+    {
+        clave:"asesor",
+        alias:[ "asesor", "id asesor", "codigo asesor" ],
+        // Nombre o ID del asesor: define el responsable en Bitrix
         bitrix:null
     }
 
 ];
 
 
+// Columnas marcadas "NO" en el listado: se leen pero no se envian a Bitrix
+export const COLUMNAS_NO_ENVIAR = [
+    "matricula",
+    "tipo de identificacion",
+    "digito de verificacion",
+    "organizacion juridica",
+    "categoria",
+    "estado matricula",
+    "fecha constitucion",
+    "fecha matricula",
+    "ano matricula",
+    "fecha ultima renovacion",
+    "ano ultima renovacion",
+    "clasificacion",
+    "activo total",
+    "capital pagado",
+    "origen empresa",
+    "fecha entrega",
+    "fecha actualizacion nit",
+    "estado nit"
+];
+
+
+// Abreviaturas de documento -> textos con los que pueden aparecer en la lista de Bitrix
+export const SINONIMOS_LISTAS = {
+    "c c":[ "cedula de ciudadania", "cedula", "cc" ],
+    "c e":[ "cedula de extranjeria", "ce" ],
+    "p p":[ "pasaporte", "pp" ],
+    "t i":[ "tarjeta de identidad", "ti" ],
+    "n i t":[ "nit" ],
+    "p e p":[ "permiso especial de permanencia", "pep" ],
+    "p p t":[ "permiso por proteccion temporal", "ppt" ]
+};
+
+
 // (AFI) Asesor: se llena con el nombre del asesor asignado
 export const CAMPO_NOMBRE_ASESOR = "UF_CRM_66D62A1EDD402";
 
 
-// Texto que excluye un registro de la carga
+// Un registro se excluye si la Identificacion dice "en tramite"
+// o si cualquier columna dice "identificacion en tramite"
 export const TEXTO_EXCLUSION = "identificacion en tramite";
+
+export const TEXTO_EXCLUSION_NIT = "tramite";

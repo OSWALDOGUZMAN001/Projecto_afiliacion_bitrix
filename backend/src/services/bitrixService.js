@@ -24,6 +24,32 @@ function urlBitrix(metodo){
 
 
 
+// Opciones de los campos tipo lista: { codigo: [{ ID, VALUE }] }
+
+export async function obtenerOpcionesListas(codigos){
+
+    const response = await axios.get(
+        urlBitrix("crm.deal.fields.json")
+    );
+
+
+    const campos = response.data.result || {};
+
+    const opciones = {};
+
+
+    for(const codigo of codigos){
+        opciones[codigo] = campos[codigo]?.items || [];
+    }
+
+
+    return opciones;
+
+}
+
+
+
+
 export async function crearNegociacionBitrix(fields){
 
 

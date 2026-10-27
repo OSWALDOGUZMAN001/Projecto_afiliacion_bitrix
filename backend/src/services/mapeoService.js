@@ -2,8 +2,11 @@ import { readFileSync } from "node:fs";
 
 import {
     MAPEO_CAMPOS,
+    COLUMNAS_NO_ENVIAR,
+    SINONIMOS_LISTAS,
     CAMPO_NOMBRE_ASESOR,
-    TEXTO_EXCLUSION
+    TEXTO_EXCLUSION,
+    TEXTO_EXCLUSION_NIT
 } from "../config/mapeoCampos.js";
 
 
@@ -18,10 +21,6 @@ const CAMPOS_NEGOCIACION = JSON.parse(
 const CAMPOS_POR_CODIGO = new Map(
     CAMPOS_NEGOCIACION.map(campo=>[campo.codigo, campo])
 );
-
-
-// Tipos que se pueden enviar directamente desde texto del CSV
-const TIPOS_DIRECTOS = ["string", "integer", "double", "date", "boolean"];
 
 
 
@@ -80,29 +79,6 @@ export function normalizarNit(valor){
 
 
 
-// Nombres visibles repetidos en Bitrix no se mapean (serian ambiguos)
-
-const CAMPOS_POR_NOMBRE = new Map();
-
-const NOMBRES_REPETIDOS = new Set();
-
-for(const campo of CAMPOS_NEGOCIACION){
-
-    const nombre = normalizar(campo.nombre);
-
-    if(CAMPOS_POR_NOMBRE.has(nombre)){
-        NOMBRES_REPETIDOS.add(nombre);
-    }
-
-    CAMPOS_POR_NOMBRE.set(nombre, campo);
-
-}
-
-for(const nombre of NOMBRES_REPETIDOS){
-    CAMPOS_POR_NOMBRE.delete(nombre);
-}
-
-
 const MAPEO_POR_ALIAS = new Map();
 
 for(const mapeo of MAPEO_CAMPOS){
@@ -114,22 +90,25 @@ for(const mapeo of MAPEO_CAMPOS){
 }
 
 
+const NO_ENVIAR = new Set(COLUMNAS_NO_ENVIAR.map(normalizar));
+
+
+export const CODIGOS_LISTA = MAPEO_CAMPOS
+    .map(m=>m.bitrix)
+    .filter(codigo=>codigo && CAMPOS_POR_CODIGO.get(codigo).tipo === "enumeration");
+
+
 
 
 // ==================================
-// RESOLVER COLUMNAS DEL CSV
+// RESOLVER COLUMNAS DEL ARCHIVO
 // ==================================
-
-/*
-Orden de prioridad para cada columna:
-1. Alias conocido (nit, razon social, celular 1...)
-2. Codigo tecnico exacto de Bitrix (UF_CRM_...)
-3. Nombre visible exacto de un campo de Negociaciones
-*/
 
 export function resolverColumnas(columnas){
 
     const mapeadas = {};
+
+    const ignoradas = [];
 
     const noMapeadas = [];
 
@@ -148,39 +127,22 @@ export function resolverColumnas(columnas){
                 bitrix:mapeo.bitrix
             };
 
-            continue;
+        }
+        else if(NO_ENVIAR.has(nombre)){
+
+            ignoradas.push(columna);
 
         }
+        else{
 
-
-        const campo =
-            CAMPOS_POR_CODIGO.get(limpiar(columna).toUpperCase()) ||
-            CAMPOS_POR_NOMBRE.get(nombre);
-
-
-        if(campo && TIPOS_DIRECTOS.includes(campo.tipo)){
-
-            mapeadas[columna] = {
-                clave:null,
-                bitrix:campo.codigo
-            };
-
-            continue;
+            noMapeadas.push(columna);
 
         }
-
-
-        noMapeadas.push({
-            columna,
-            motivo: campo
-                ? `Campo ${campo.codigo} es de tipo ${campo.tipo} y no se puede llenar desde texto`
-                : "No coincide con ningún campo de Negociaciones"
-        });
 
     }
 
 
-    return { mapeadas, noMapeadas };
+    return { mapeadas, ignoradas, noMapeadas };
 
 }
 
@@ -214,11 +176,19 @@ function convertirValor(valor, tipo){
 // MAPEAR UNA FILA
 // ==================================
 
+/*
+datos:         valores por clave interna (para la base local)
+camposBitrix:  campos listos para enviar
+valoresLista:  campos de lista (codigo -> texto), se traducen a ID despues
+*/
+
 export function mapearFila(fila, columnasMapeadas){
 
     const datos = {};
 
     const camposBitrix = {};
+
+    const valoresLista = {};
 
 
     for(const [columna, destino] of Object.entries(columnasMapeadas)){
@@ -230,14 +200,29 @@ export function mapearFila(fila, columnasMapeadas){
         }
 
 
-        if(destino.clave && datos[destino.clave] === undefined){
+        if(datos[destino.clave] === undefined){
             datos[destino.clave] = valor;
         }
 
 
-        if(destino.bitrix && camposBitrix[destino.bitrix] === undefined){
+        if(!destino.bitrix){
+            continue;
+        }
 
-            const campo = CAMPOS_POR_CODIGO.get(destino.bitrix);
+
+        const campo = CAMPOS_POR_CODIGO.get(destino.bitrix);
+
+
+        if(campo.tipo === "enumeration"){
+
+            valoresLista[destino.bitrix] ??= valor;
+
+            continue;
+
+        }
+
+
+        if(camposBitrix[destino.bitrix] === undefined){
 
             const convertido = convertirValor(valor, campo.tipo);
 
@@ -265,18 +250,74 @@ export function mapearFila(fila, columnasMapeadas){
     }
 
 
-    return { datos, camposBitrix };
+    return { datos, camposBitrix, valoresLista };
 
 }
 
 
 
 
-export function tieneExclusion(fila){
+export function tieneExclusion(fila, datos){
+
+    if(normalizar(datos.nitOriginal).includes(TEXTO_EXCLUSION_NIT)){
+        return true;
+    }
 
     return Object.values(fila).some(
         valor=>normalizar(valor).includes(TEXTO_EXCLUSION)
     );
+
+}
+
+
+
+
+// ==================================
+// TEXTO -> ID DE OPCION EN LISTAS BITRIX
+// ==================================
+
+// "UBATE (CUNDINAMARCA)" -> "ubate", "BOGOTA D.C." -> "bogota"
+function variantes(texto){
+
+    const base = normalizar(texto);
+
+    const sinParentesis = normalizar(String(texto).replace(/\(.*?\)/g, ""));
+
+    const sinDc = sinParentesis.replace(/\bd c\b/g, "").trim();
+
+    return [
+        base,
+        sinParentesis,
+        sinDc,
+        base.replace(/ /g, ""),
+        ...(SINONIMOS_LISTAS[base] || [])
+    ].filter(Boolean);
+
+}
+
+
+export function buscarOpcionLista(valor, opciones){
+
+    const buscadas = new Set(variantes(valor));
+
+
+    for(const opcion of opciones){
+
+        if(variantes(opcion.VALUE).some(v=>buscadas.has(v))){
+            return opcion.ID;
+        }
+
+    }
+
+
+    return null;
+
+}
+
+
+export function nombreCampo(codigo){
+
+    return CAMPOS_POR_CODIGO.get(codigo)?.nombre || codigo;
 
 }
 

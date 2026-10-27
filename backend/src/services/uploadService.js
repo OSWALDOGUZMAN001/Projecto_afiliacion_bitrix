@@ -1,12 +1,19 @@
 import prisma from "../utils/prisma.js";
 
-import { crearNegociacionBitrix } from "./bitrixService.js";
+import {
+    crearNegociacionBitrix,
+    obtenerOpcionesListas
+} from "./bitrixService.js";
 
 import {
     resolverColumnas,
     mapearFila,
     tieneExclusion,
+    buscarOpcionLista,
+    nombreCampo,
+    normalizar,
     limpiar,
+    CODIGOS_LISTA,
     CAMPO_NOMBRE_ASESOR
 } from "./mapeoService.js";
 
@@ -22,8 +29,9 @@ function armarNegociacion(datos, camposBitrix, asesor){
 
     return {
 
+        // Razón Social -> Nombre de la negociacion
         TITLE:
-        `AFILIACIÓN - ${datos.razonSocial || "SIN RAZÓN SOCIAL"} - ${datos.nit}`,
+        datos.razonSocial || `AFILIACIÓN - ${datos.nit}`,
 
         CATEGORY_ID,
 
@@ -56,9 +64,26 @@ function numeroEntero(valor){
 
 
 
+// El asesor puede venir como ID ("3") o como nombre ("Daniel Angel")
+
+function buscarAsesor(valor, asesores){
+
+    const texto = limpiar(valor);
+
+    if(/^\d+$/.test(texto)){
+        return asesores.find(a=>a.id === Number(texto));
+    }
+
+    return asesores.find(a=>normalizar(a.nombre) === normalizar(texto));
+
+}
+
+
+
+
 /*
-empresas:  filas del CSV tal como vienen (columna -> valor)
-asesorId:  asesor por defecto para filas sin columna de asesor
+empresas:          filas del archivo tal como vienen (columna -> valor)
+asesorPorDefecto:  ID o nombre para filas sin columna de asesor
 */
 
 export async function procesarEmpresas(
@@ -67,7 +92,7 @@ export async function procesarEmpresas(
 
     empresas,
 
-    asesorIdPorDefecto
+    asesorPorDefecto
 
 ){
 
@@ -80,17 +105,22 @@ export async function procesarEmpresas(
 
     const errores = [];
 
+    const advertencias = [];
+
 
 
     const columnas = Object.keys(empresas[0] || {});
 
-    const { mapeadas, noMapeadas } = resolverColumnas(columnas);
+    const { mapeadas, ignoradas, noMapeadas } = resolverColumnas(columnas);
 
 
 
-    const asesores = new Map(
-        (await prisma.asesor.findMany({ where:{ activo:true } })).map(a=>[a.id, a])
-    );
+    const asesores = await prisma.asesor.findMany({
+        where:{ activo:true }
+    });
+
+
+    const opcionesListas = await obtenerOpcionesListas(CODIGOS_LISTA);
 
 
 
@@ -113,10 +143,10 @@ export async function procesarEmpresas(
     for(const [index, fila] of empresas.entries()){
 
 
-        // Fila 1 del CSV son los encabezados
+        // Fila 1 del archivo son los encabezados
         const numeroFila = index + 2;
 
-        const { datos, camposBitrix } = mapearFila(fila, mapeadas);
+        const { datos, camposBitrix, valoresLista } = mapearFila(fila, mapeadas);
 
         const registro = {
             fila:numeroFila,
@@ -130,7 +160,7 @@ export async function procesarEmpresas(
 
             // 1. Identificacion en tramite: no se sube
 
-            if(tieneExclusion(fila)){
+            if(tieneExclusion(fila, datos)){
 
                 omitidos.push({
                     ...registro,
@@ -150,7 +180,7 @@ export async function procesarEmpresas(
 
                 errores.push({
                     ...registro,
-                    motivo:"Registro sin NIT"
+                    motivo:"Registro sin Identificación (NIT)"
                 });
 
                 continue;
@@ -159,31 +189,7 @@ export async function procesarEmpresas(
 
 
 
-            // 3. Asesor asignado
-
-            const asesorId = numeroEntero(
-                datos.asesorId ?? limpiar(asesorIdPorDefecto)
-            );
-
-            const asesor = asesores.get(asesorId);
-
-
-            if(!asesor){
-
-                errores.push({
-                    ...registro,
-                    motivo: asesorId === null
-                        ? "Registro sin asesor asignado"
-                        : `El asesor ${asesorId} no está registrado`
-                });
-
-                continue;
-
-            }
-
-
-
-            // 4. NIT ya cargado anteriormente
+            // 3. NIT ya cargado anteriormente
 
             const existe = await prisma.empresa.findUnique({
 
@@ -211,7 +217,55 @@ export async function procesarEmpresas(
 
 
 
-            // 5. Crear negociacion en Bitrix
+            // 4. Asesor asignado
+
+            const valorAsesor = datos.asesor ?? limpiar(asesorPorDefecto);
+
+            const asesor = buscarAsesor(valorAsesor, asesores);
+
+
+            if(!asesor){
+
+                errores.push({
+                    ...registro,
+                    motivo: valorAsesor
+                        ? `El asesor "${valorAsesor}" no está registrado`
+                        : "Registro sin asesor asignado"
+                });
+
+                continue;
+
+            }
+
+
+
+            // 5. Campos de lista: texto -> ID de la opcion en Bitrix
+
+            for(const [codigo, valor] of Object.entries(valoresLista)){
+
+                const id = buscarOpcionLista(valor, opcionesListas[codigo]);
+
+                if(id){
+
+                    camposBitrix[codigo] = id;
+
+                }
+                else{
+
+                    advertencias.push({
+                        ...registro,
+                        campo:nombreCampo(codigo),
+                        valor,
+                        motivo:"No existe esa opción en la lista de Bitrix; el campo se dejó vacío"
+                    });
+
+                }
+
+            }
+
+
+
+            // 6. Crear negociacion en Bitrix
 
             const bitrixId = await crearNegociacionBitrix(
                 armarNegociacion(datos, camposBitrix, asesor)
@@ -219,7 +273,7 @@ export async function procesarEmpresas(
 
 
 
-            // 6. Guardar localmente solo si Bitrix la creo
+            // 7. Guardar localmente solo si Bitrix la creo
 
             await prisma.empresa.create({
 
@@ -231,23 +285,17 @@ export async function procesarEmpresas(
 
                     direccion:datos.direccion,
 
-                    barrio:datos.barrio,
+                    localidad:datos.ciudad,
 
-                    localidad:datos.localidad,
+                    celular1:datos.celular,
 
-                    celular1:datos.celular1,
+                    telefono:datos.telefono1,
 
-                    celular2:datos.celular2,
-
-                    celular3:datos.celular3,
-
-                    telefono:datos.telefono,
+                    celular2:datos.telefono2,
 
                     email:datos.email,
 
                     codigoCiiu:datos.codigoCiiu,
-
-                    baseDatos:datos.baseDatos,
 
                     representanteLegal:datos.representanteLegal,
 
@@ -341,6 +389,8 @@ export async function procesarEmpresas(
 
         errores,
 
+        advertencias,
+
         columnas:{
 
             mapeadas:Object.entries(mapeadas).map(
@@ -350,6 +400,8 @@ export async function procesarEmpresas(
                     bitrix:destino.bitrix
                 })
             ),
+
+            ignoradas,
 
             noMapeadas
 

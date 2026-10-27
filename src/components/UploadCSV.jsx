@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import Papa from "papaparse";
 
+import readExcelFile from "read-excel-file/browser";
+
 
 const API_URL = "http://localhost:3000/api/companies";
 
@@ -41,48 +43,174 @@ export default function UploadCSV() {
 
 
     // ==================================
-    // LEER CSV
-    // Papaparse detecta ";" o "," y respeta comillas
+    // FECHA EXCEL -> dd/mm/aaaa
     // ==================================
 
-    function leerCSV(file){
+    function textoCelda(valor){
+
+        if(valor instanceof Date){
+
+            return valor.toLocaleDateString(
+                "es-CO",
+                { timeZone:"UTC" }
+            );
+
+        }
+
+        return limpiarTexto(valor);
+
+    }
 
 
-        Papa.parse(file,{
-
-            header:true,
-
-            skipEmptyLines:"greedy",
-
-            encoding:"UTF-8",
-
-            transformHeader:(header)=>
-                limpiarTexto(header.replace(/^﻿/, "")),
-
-            transform:(valor)=>
-                limpiarTexto(valor),
 
 
-            complete:(results)=>{
 
 
-                console.log(
-                    "SEPARADOR DETECTADO:",
-                    results.meta.delimiter
-                );
+
+    // ==================================
+    // FILAS -> OBJETOS
+    // El encabezado es la fila que tiene la columna "Identificación",
+    // sin importar en qué posición esté
+    // ==================================
+
+    function esEncabezadoNit(texto){
+
+        const normalizado = String(texto ?? "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .trim();
+
+        return normalizado === "identificacion" || normalizado === "nit";
+
+    }
 
 
-                console.log(
-                    "DATOS LEIDOS:",
-                    results.data
-                );
+    function filasAObjetos(filas){
 
 
-                setEmpresas(results.data);
+        const indiceEncabezado = filas
+            .slice(0, 20)
+            .findIndex(fila=>fila.some(esEncabezadoNit));
 
-            }
 
-        });
+        if(indiceEncabezado === -1)
+            return null;
+
+
+        const headers = filas[indiceEncabezado]
+            .map(h=>textoCelda(h).replace(/^\uFEFF/, ""));
+
+
+        return filas
+
+            .slice(indiceEncabezado + 1)
+
+            .map(fila=>{
+
+                let objeto = {};
+
+                headers.forEach((header,index)=>{
+
+                    if(header)
+                        objeto[header] = textoCelda(fila[index]);
+
+                });
+
+                return objeto;
+
+            })
+
+            .filter(objeto=>Object.values(objeto).some(Boolean));
+
+    }
+
+
+
+
+
+
+
+    // ==================================
+    // LEER ARCHIVO (Excel o CSV)
+    // ==================================
+
+    async function leerArchivo(file){
+
+
+        let filas;
+
+
+        if(/\.xlsx$/i.test(file.name)){
+
+
+            // Numeros como texto: el NIT no pierde ceros ni precision
+            const hojas = await readExcelFile(
+                file,
+                { parseNumber:(valor)=>valor }
+            );
+
+
+            // Primera hoja que tenga la columna "Identificación"
+            const hoja = hojas.find(
+                h=>h.data.slice(0, 20).some(fila=>fila.some(esEncabezadoNit))
+            );
+
+
+            console.log(
+                "HOJA LEIDA:",
+                hoja?.sheet
+            );
+
+
+            filas = hoja ? hoja.data : [];
+
+        }
+        else{
+
+
+            // Papaparse detecta ";" o "," y respeta comillas
+            filas = await new Promise(resolve=>{
+
+                Papa.parse(file,{
+
+                    skipEmptyLines:"greedy",
+
+                    encoding:"UTF-8",
+
+                    complete:(results)=>resolve(results.data)
+
+                });
+
+            });
+
+        }
+
+
+
+        const datos = filasAObjetos(filas);
+
+
+        if(!datos){
+
+            alert(
+                'No se encontró la columna "Identificación" en el archivo'
+            );
+
+            setEmpresas([]);
+
+            return;
+
+        }
+
+
+        console.log(
+            "DATOS LEIDOS:",
+            datos
+        );
+
+
+        setEmpresas(datos);
 
 
     }
@@ -114,7 +242,7 @@ export default function UploadCSV() {
 
         setEmpresas([]);
 
-        leerCSV(file);
+        leerArchivo(file);
 
         setResultado(null);
 
@@ -142,7 +270,7 @@ export default function UploadCSV() {
         ){
 
             alert(
-                "Debe seleccionar un archivo CSV"
+                "Debe seleccionar un archivo Excel o CSV"
             );
 
             return;
@@ -188,7 +316,7 @@ export default function UploadCSV() {
                         archivo.name,
 
 
-                        // Se usa solo si el CSV no trae columna de asesor
+                        // Se usa solo si el archivo no trae columna "asesor"
                         asesorId:
                         asesorId || null,
 
@@ -281,7 +409,7 @@ Carga de afiliaciones
 
 
 <p>
-Importa un archivo CSV para crear negociaciones de afiliación en Bitrix24.
+Importa un archivo Excel (.xlsx) o CSV para crear negociaciones de afiliación en Bitrix24.
 </p>
 
 
@@ -296,7 +424,7 @@ Importa un archivo CSV para crear negociaciones de afiliación en Bitrix24.
 
 type="file"
 
-accept=".csv"
+accept=".xlsx,.csv"
 
 onChange={seleccionarArchivo}
 
@@ -309,7 +437,7 @@ onChange={seleccionarArchivo}
 ⬆️
 
 <h3>
-Arrastra tu archivo CSV aquí
+Arrastra tu archivo Excel o CSV aquí
 </h3>
 
 
@@ -475,17 +603,17 @@ Object.values(empresa)
 
 <label className="asesor-field">
 
-ID asesor (solo si el CSV no trae columna "asesor")
+Asesor por defecto, nombre o ID (solo si el archivo no trae columna "asesor")
 
 <input
 
-type="number"
+type="text"
 
 value={asesorId}
 
 onChange={e=>setAsesorId(e.target.value)}
 
-placeholder="Ej: 1"
+placeholder="Ej: Daniel Angel"
 
 />
 
@@ -717,13 +845,30 @@ columnas={[
 
 <TablaDetalle
 
-titulo="Columnas del CSV sin mapear"
+titulo="Advertencias (negociación creada con campos vacíos)"
 
-filas={resultado.columnas.noMapeadas}
+filas={resultado.advertencias}
 
 columnas={[
-    ["columna","Columna"],
+    ["fila","Fila"],
+    ["nit","NIT"],
+    ["campo","Campo Bitrix"],
+    ["valor","Valor del archivo"],
     ["motivo","Motivo"]
+]}
+
+/>
+
+
+
+<TablaDetalle
+
+titulo="Columnas del archivo que no se reconocieron"
+
+filas={resultado.columnas.noMapeadas.map(columna=>({ columna }))}
+
+columnas={[
+    ["columna","Columna"]
 ]}
 
 />
