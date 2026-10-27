@@ -609,3 +609,14 @@ pre{
     width:100%;
 
 }
+
+
+.dashboard-info{
+
+    margin:-8px 0 20px;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+}

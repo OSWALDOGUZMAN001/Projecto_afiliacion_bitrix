@@ -368,6 +368,16 @@ export default function UploadCSV() {
             setResultado(data);
 
 
+            // Avisar al Dashboard para actualizar las tarjetas
+            if(data.success){
+
+                window.dispatchEvent(
+                    new CustomEvent("carga-finalizada")
+                );
+
+            }
+
+
 
         }
 

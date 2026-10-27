@@ -1,7 +1,30 @@
 import { procesarEmpresas } from "../src/services/uploadService.js";
+import prisma from "../src/utils/prisma.js";
 
 
 export default async function companiesRoutes(app){
+
+
+    // Resumen de la ultima carga + total historico de empresas creadas
+
+    app.get("/resumen", async()=>{
+
+        const [ultimaCarga, totalCreadas] = await Promise.all([
+
+            prisma.carga.findFirst({
+                orderBy:{ id:"desc" }
+            }),
+
+            prisma.empresa.count({
+                where:{ estado:"CREADO" }
+            })
+
+        ]);
+
+        return { ultimaCarga, totalCreadas };
+
+    });
+
 
 
     app.post("/", async(request)=>{
