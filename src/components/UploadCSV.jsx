@@ -2,8 +2,6 @@ import { useState } from "react";
 
 import Papa from "papaparse";
 
-import readExcelFile from "read-excel-file/browser";
-
 
 const API_URL = "http://localhost:3000/api/companies";
 
@@ -142,6 +140,10 @@ export default function UploadCSV() {
 
 
         if(/\.xlsx$/i.test(file.name)){
+
+
+            // Se carga solo en el navegador y solo al leer un Excel
+            const { default:readExcelFile } = await import("read-excel-file/browser");
 
 
             // Numeros como texto: el NIT no pierde ceros ni precision
