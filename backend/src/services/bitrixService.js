@@ -1,18 +1,23 @@
 import axios from "axios";
 
 
-// URL del webhook entrante, terminada en "/".
+// URL del webhook entrante.
 // Ejemplo: https://comfacundi.bitrix24.es/rest/USUARIO/TOKEN/
-// Se configura en backend/.env, nunca en el codigo.
+// Temporal: pegar aqui la URL real SOLO en la copia local.
+// El repositorio es publico: no hacer commit con el token real.
+// Si existe BITRIX_WEBHOOK en .env, tiene prioridad.
+
+const BITRIX_WEBHOOK = "PEGAR_AQUI_URL_WEBHOOK";
+
 
 function urlBitrix(metodo){
 
-    const webhook = process.env.BITRIX_WEBHOOK;
+    const webhook = process.env.BITRIX_WEBHOOK || BITRIX_WEBHOOK;
 
-    if(!webhook){
+    if(!webhook.startsWith("https://")){
 
         throw new Error(
-            "Falta BITRIX_WEBHOOK en backend/.env"
+            "Falta la URL del webhook de Bitrix en backend/src/services/bitrixService.js"
         );
 
     }
